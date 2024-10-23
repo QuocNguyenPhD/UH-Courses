@@ -4,16 +4,21 @@
 \usepackage{makeidx} % 'makeidx' make and show index
 \usepackage{enumitem} % itemize, enumerate, description.
 \usepackage{hyperref} % hyperlinks, cross-references.
-\usepackage{xcolor} % foreground and background color management. Better color mixing compared to 'color'
-\usepackage{graphicx} % provide options for \includegraphics. Builds on 'graphic'
+\usepackage{xcolor} % foreground and background color management.
+% Better color mixing compared to 'color'
+\usepackage{graphicx} % provide options for \includegraphics. Builds
+% on 'graphic'
 \usepackage{caption} % better control over captions of figures and equations.
 \usepackage{appendix} % extra control over appendix
-\usepackage[backend=biber, style=alphabetic]{biblatex} % better than bibtex, people say.
+\usepackage[backend=biber, style=alphabetic]{biblatex} % better than
+% bibtex, people say.
 \usepackage{tocbibind} % add ToC/Bibliography/Index to ToC
-
-\usepackage{amsmath} % math symbols, matrices, cases, trig functions, var-greek symbols.
+\usepackage{marginnote}
+\usepackage{amsmath} % math symbols, matrices, cases, trig functions,
+% var-greek symbols.
 \usepackage{amsfonts} % mathbb, mathfrak, large sum and product symbols.
-\usepackage{amssymb} % extended list of math symbols from AMS. https://ctan.math.washington.edu/tex-archive/fonts/amsfonts/doc/amssymb.pdf
+\usepackage{amssymb} % extended list of math symbols from AMS.
+% https://ctan.math.washington.edu/tex-archive/fonts/amsfonts/doc/amssymb.pdf
 \usepackage{amsthm} % theorem styling.
 \usepackage{mathrsfs} % mathscr fonts.
 \usepackage{yhmath} % widehat.
@@ -25,16 +30,17 @@
 
 \geometry{
   a4paper, % 'a4paper', 'c5paper', 'letterpaper', 'legalpaper'
-  asymmetric, % don't swap margins in left and right pages. as opposed to 'twoside'
+  asymmetric, % don't swap margins in left and right pages. as
+  % opposed to 'twoside'
   centering, % to center the content between margins
   bindingoffset=0cm,
 }
 
 \hypersetup{
-    colorlinks,
-    linkcolor={blue!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
+  colorlinks,
+  linkcolor={blue!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black}
 }
 
 \theoremstyle{plain} % default; italic text, extra space above and below
@@ -50,7 +56,7 @@
 
 \theoremstyle{remark} % upright text, no extra space above or below
 \newtheorem{remark}{Remark}[section]
-\newtheorem*{note}{Note} %'Notes' in italics and without counter 
+\newtheorem*{note}{Note} %'Notes' in italics and without counter
 
 \newcommand{\propositionautorefname}{Proposition}
 \newcommand{\lemmaautorefname}{Lemma}
@@ -72,8 +78,10 @@
 %   {\par}
 %
 % \newenvironment{solution}
-%   {\ifshowsolutions \expandafter\solutioncontent \else \expandafter\comment \fi}
-%   {\ifshowsolutions \hfill \qedsymbol \else \expandafter\endcomment \fi \vspace{1em}}
+%   {\ifshowsolutions \expandafter\solutioncontent \else
+% \expandafter\comment \fi}
+%   {\ifshowsolutions \hfill \qedsymbol \else \expandafter\endcomment
+% \fi \vspace{1em}}
 %
 % \newenvironment{solutioncontent}
 %   {\par\noindent\textit{Solution.}}
@@ -81,41 +89,43 @@
 
 \addbibresource{articles.bib}
 
-
 \begin{document}
-    \title{MATH6320 - Functions of a Real Variable}
+\title{MATH6320 - Functions of a Real Variable}
 
-    % \showsolutionstrue
-    %\showsolutionsfalse %If need to hide solutions
+% \showsolutionstrue
+%\showsolutionsfalse %If need to hide solutions
 
-    \author{
-      Joel Sleeba \\
-      % Cochin University of Science and Technology\\
-      joelsleeba1@gmail.com \\
-    }
+\author{
+  Joel Sleeba \\
+  % Cochin University of Science and Technology\\
+  joelsleeba1@gmail.com \\
+}
 
-    \maketitle
+\maketitle
 
-    \pagenumbering{roman} \setcounter{page}{2}
-    \tableofcontents
-    \pagenumbering{arabic} \setcounter{page}{1}
+\pagenumbering{roman} \setcounter{page}{2}
+\tableofcontents
+\pagenumbering{arabic} \setcounter{page}{1}
 
-    \include{lectures/1.tex}
-    \include{lectures/2.tex}
-    \include{lectures/3.tex}
-    \include{lectures/4.tex}
-    \include{lectures/5.tex}
-    \include{lectures/6.tex}
-    \include{lectures/7.tex}
-    \include{lectures/8.tex}
-    \include{lectures/9.tex}
-    \include{lectures/10.tex}
-    \include{lectures/11.tex}
-    \include{lectures/12.tex}
-    \include{lectures/13.tex}
+\include{lectures/1.tex}
+\include{lectures/2.tex}
+\include{lectures/3.tex}
+\include{lectures/4.tex}
+\include{lectures/5.tex}
+\include{lectures/6.tex}
+\include{lectures/7.tex}
+\include{lectures/8.tex}
+\include{lectures/9.tex}
+\include{lectures/10.tex}
+\include{lectures/11.tex}
+\include{lectures/12.tex}
+\include{lectures/13.tex}
+\include{lectures/15.tex}
+\include{lectures/16.tex}
+\include{lectures/17.tex}
 
-
-    \printbibliography[heading=bibintoc]
+\printbibliography[heading=bibintoc]
 
 \end{document}
+
 
