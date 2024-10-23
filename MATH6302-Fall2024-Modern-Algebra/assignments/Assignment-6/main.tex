@@ -129,7 +129,8 @@
       \mathcal{O}^{ga} = \mathcal{O}^b$$
       shows that $G$ acts transitively on $\mathcal{O}$.
 
-      Now from the theorem we proved, we know that $|\mathcal{O}^a| = |H:H_a|$
+      Now from the orbit-stabilizer theorem, we know that
+      $|\mathcal{O}^a| = |H:H_a|$
       where $H_a$ is the stabilizer of $a \in A$ under the action by
       $H$. Since the cosets of $H_a$ partition $H$ sets of equal
       cardinality, we'll be proving $|\mathcal{O}^{a}| =
@@ -153,7 +154,8 @@
       Since $H$ borrows the action of $G$ on $A$, $H_a = H \cap G_a$
       follows from the definition of the stabilizer of $a$.
 
-      Since $G$ acts transitively on $\mathcal{O}$, the orbit of
+      Now we'll go on to show that $r = |G:HG_a|$. Since $G$ acts
+      transitively on $\mathcal{O}$, the orbit of
       $\mathcal{O}^a$ under this action is the whole $\mathcal{O}$.
       Also, since $H$ is normal, we notice that $HG_a = G_aH$.
       Hence by a similar reasoning as above, to show $ r = |\mathcal{O}| = |G :
@@ -184,7 +186,36 @@
   \end{solution}
 
   \question
+  Prove that if $H$ has finite index $n$, then there is a normal
+  subgroup $K$ of $G$ with $K \leqslant H$ such that $|G:K| \le n!$
+  \label{q:2}
+  \begin{solution}
+    Consider $G/H$, the collection of left cosets of $H$ in $G$. Let
+    $G$ act on $G/H$ by left multiplication. We see that if $gH$ is
+    any coset of $H$, its stabilizer
+    \begin{align*}
+      G_{gH} & = \{ x \in G  \ : \  xgH = gH \} \\
+      &= \{ x \in G  \ : \  x \in gHg^{-1} \} \\
+      &= gHg^{-1}
+    \end{align*}
+    Therefore the kernel of the action is $K = \cap_{g \in G}G_{gH} =
+    \cap_{ g \in G}gHg^{-1}$. We claim that this is our required subgroup $K$.
+
+    Since $K$ is the kernel of the left multiplication action on
+    $G/H$, it is the kernel of the corresponding permutation
+    representation $\phi: G \to S_{G/H}$. Therefore we see that $K$ is
+    normal. Moreover by definition $K = \cap_{ g \in G}gHg^{-1}
+    \subset H$, shows that $K \leqslant H$.
+
+    Now by the first isomorphism theorem, $G/K$ is isomorphic to a
+    subgroup of $S_{G/H}$. Hence $|G:K| = |G/K| \le |S_{G/H}|$. Since
+    $|G/H| = n$, $S_{G/H}$ is isomorphic to $S_n$, which have $n!$
+    elements. Thus, $|G:K| \le n!$
+  \end{solution}
+
+  \question
   Let $G$ be a group and $ \pi: G \to S_G$ be the left regular
+  \label{q:order_mod}
   representation. Prove that if $x$ is an element of order $n$ and
   $|G| = mn$, then $\pi(x)$ is a product of $m$ $n$-cycles. Also
   prove that if $\pi(x)$ is an odd permutation, then $m$ is odd and $n$ is even.
@@ -208,20 +239,45 @@
     Now if $\pi(x)$ is an odd permutation, we get that both $m$ and
     $n-1$ has to be odd which forces $|x| = n$ to be even and
     $\frac{|G|}{|x|} = m$ to be odd.
+  \end{solution}
+
+  \question
+  \label{q:3}
+  Let $G, \pi$ as in the previous exercise. Prove that if $G$
+  contains an odd permutation, then $G$ has a subgroup of index 2.
+  \begin{solution}
+    Since $\pi(G)$ contains an odd permutation, we see that $\pi(G)
+    \nleqslant A_G$, the alternating subgroup of $S_G$. Note that
+    since $G$ is a finite group, elements of $G$ can be indexed and
+    therefore $S_G$ can be identified with $S_n$ where $n = |G|$. Similarly we
+    can identify $A_G$ with $A_n$.
+
+    Now exercise 3 from section 3.3 of the textbook shows that if $H
+    \trianglelefteq G$ is a subgroup of prime index $p$, then for all
+    $K \leqslant G$ either
+    \begin{enumerate}[label=(\arabic*)]
+      \item $K \leqslant H$ or
+      \item $G = HK$ and $|K : K \cap H| = p$
+    \end{enumerate}
+
+    Replace $G = S_n, H = A_n, K = \pi(G)$ to the above
+    statement. Since $|S_n : A_n| = 2$ and  $\pi(G) \nleqslant A_n$,
+    we get that $|\pi(G): \pi(G) \cap A_n| = 2$. Since the left
+    regular representation is faithful (injective), the preimage of
+    $\pi(G) \cap A_n$ under $\pi$ will have index 2 in $G$.
 
   \end{solution}
 
   \question
-  \textcolor{red}{not finished}
-
+  Prove that if $|G| = 2k$ where $k$ is odd then $G$ has a subgroup
+  of index $2$.
   \begin{solution}
-
-  \end{solution}
-
-  \question
-  \textcolor{red}{not finished}
-
-  \begin{solution}
+    Since $ G$ is a finite group and $2\big||G|$, $G$ has an element
+    $x$ with $|x| = 2$ by Cauchy's theorem. Since $|x| = 2$ is even
+    and $\frac{|G|}{|x|} = k$ is odd, by question \ref{q:order_mod}, for
+    the regular representation $\pi: G \to S_G$, we get that $\pi(x)$
+    is a odd permutation. Now by question \ref{q:3}, we get that $G$
+    has a subgroup of index 2.
 
   \end{solution}
 
@@ -254,28 +310,82 @@
   $G \neq \cup_{g \in G}gHg^{-1}$.
   \begin{solution}
     Let $H$ be a proper subgroup of $G$. Then $H \leqslant M$ for
-    some maximal subgroup $M$ of $G$.
-    % We'll argue for the existence
-    % of $M$ using Zorn's lemma.
-    %
-    % Let $\mathscr{G}$ be the collection of all subgroups of $G$ that
-    % contain $H$. Order it by set inclusion. Then for any chain
-    % $\mathscr{C} \subset \mathscr{G}$,
-    Then $gHg^{-1} \subset gMg^{-1}$ for all $g \in G$.
+    some maximal subgroup $M$ of $G$. Existence of such a maximal
+    subgroup is guaranteed because the group
+  is a finite, and have only a finite number of subgroups).
+  % We'll argue for the existence
+  % of $M$ using Zorn's lemma.
+  %
+  % Let $\mathscr{G}$ be the collection of all subgroups of $G$ that
+  % contain $H$. Order it by set inclusion. Then for any chain
+  % $\mathscr{C} \subset \mathscr{G}$,
+  Then $gHg^{-1} \subset gMg^{-1}$ for all $g \in G$.
 
-    If $M$ is normal, then $gMg^{-1} = M$ for all $g \in G$ and thus $gHg^{-1}
-    \subset M$ for all all $g \in G$ proves our statement.
-    If $M$ is not normal, from the above problem, we get that \[
-      \big|\bigcup_{g \in G}gMg^{-1}\big| \le (|M| - 1)|G:M| + 1 =
-      \frac{|M|-1}{|M|}|G| + \frac{|M|}{|M|} = |G| + (1 - \frac{|G|}{|M|}) < |G|
-    \]
-    where the $1$ is added above to include the identity element in
-    the conjugates and the last inequality is because $|M| < |G|$.
+  If $M$ is normal, then $gMg^{-1} = M$ for all $g \in G$ and thus $gHg^{-1}
+  \subset M$ for all all $g \in G$ proves our statement.
+  If $M$ is not normal, from the above problem, we get that \[
+    \big|\bigcup_{g \in G}gMg^{-1}\big| \le (|M| - 1)|G:M| + 1 =
+    \frac{|M|-1}{|M|}|G| + \frac{|M|}{|M|} = |G| + (1 - \frac{|G|}{|M|}) < |G|
+  \]
+  where the $1$ is added above to include the identity element in
+  the conjugates and the last inequality is because $|M| < |G|$.
 
-    Hence $|\cup_{g \in G}gHg^{-1}| \le |\cup_{g \in G}gMg^{-1}| <
-    |G|$ which proves our assertion.
+  Hence $|\cup_{g \in G}gHg^{-1}| \le |\cup_{g \in G}gMg^{-1}| <
+  |G|$ which proves our assertion.
+\end{solution}
 
-  \end{solution}
+\question
+Let $p, q$ be primes with $p < q$. Prove that a non-abelian group $G$
+of order $pq$ has a non-normal subgroup of index $q$, so that there
+exists an injective homomorphism into $S_q$. Deduce that $G$ is
+isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic
+group generated by the $q$-cycle $(1, 2, \ldots q)$.
+\begin{solution}
+  Since $p < q$, we know that every subgroup $G$ of index $p$ is
+  normal. If every subgroup of index $q$ is also normal, this would
+  force every subgroup of $G$ to be normal. Then if $H_p, H_q$ are
+  any subgroups of order $p, q$ respectively, since they are both
+  normal with $H_p \cap H_q = \{ e \}$, we get that $G \cong H_p
+  \times H_q \cong \mathbb{Z}_p \times \mathbb{Z}_q$. Hence we see
+  that $G$ is Abelian. Hence if our group is non-Abelian, we must have a
+  non-normal subgroup $H$ of index $q$ (order $p$).
+
+  Now consider the left regular action of $G$ on $G/H$, the left
+  cosets of $G$. We know from question \ref{q:2} that the kernel of
+  this action is $K = \cap_{g \in G}gHg^{-1} \leqslant H$. Since $K
+  \leqslant H$ and $|H| = p$(prime), by Lagrange's theorem, either $K
+  = H$ or $K = \{ e \}$.
+  If $K = H$, then this would force $gHg^{-1} = H$ for all $g \in H$,
+  making $H$ normal and contradicting our assumption. Therefore, $K =
+  \{ e \}$. This shows that the action of $G$ on $G/H$ is faithful.
+  Hence the corresponding homomorphism $\phi:G \to S_{G/H}$ is injective.
+  Since $|G/H| = q$, indexing elements of $G/H$ by the numbers $1, 2,
+  \ldots q$ gives an injective homomorphism from $G \to S_q$.
+
+  Since $q$ is also a prime that divides the order of $|G|$,
+  Cauchy's theorem guarantees the existence of a subgroup $K
+  \leqslant G$ of order
+  $q$. Moreover any subgroup of order $q$ must have index $p$,
+  and since $p$ is the smallest prime dividing the order of the group, we
+  see that $K$ must be normal in $G$. Then $HK = KH = G$ since it
+  contains elements of order $p, q$. Now let $k$ be a generator
+  of $K$. We can choose to index the elements in $S_{G/H}$ with $1,
+  2, ... q$ such that $\phi(k) = (1, 2, \ldots q)$. Then clearly
+  $\phi(k) \in N_{S_q}\langle (1, 2, \ldots q)\rangle$. If $h$ is a
+  generator of our above subgroup $H$, then for any element $(1, 2,
+  \ldots q)^n \in \langle (1,2, \ldots q) \rangle $, we have
+  \begin{align*}
+    \phi(h)(1, 2, \ldots q)^n\phi(h)^{-1} &= \phi(h)\phi(k)\phi(h^{-1}) \\
+    &= \phi(hk^nh^{-1}) \\
+    &= \phi(k^m) \quad \quad \textrm{ by the normality of }  K \\
+    &= (1, 2, \ldots q)^m  \quad \in \quad \langle (1, 2, \ldots q)  \rangle
+  \end{align*}
+  This shows that $\phi(h) \in N_{S_q}\langle (1, 2, \ldots q)  \rangle$.
+\end{solution}
+Now since $h, k$ are generators for $H$ and $K$ respectively,
+$\langle  h , k \rangle = G$ (since $HK = G$). Hence $\phi(h), \phi(k)
+\in N_{ S_q}\langle (1, 2, \ldots q)\rangle$ gives $\phi(G)
+\leqslant N_{S_q}\langle (1, 2, \ldots q)\rangle$.
 
 \end{questions}
 \printbibliography[heading=bibintoc]
