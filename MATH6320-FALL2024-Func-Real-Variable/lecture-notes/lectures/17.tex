@@ -53,10 +53,11 @@
   (A_j \cup V_j)^c$. Since $K_j \subset V_j$, the set where they possibly
   \marginnote{\scriptsize Add a diagram for ease of reasoning}
   disagree is $$D = \bigcup_{j = 1}^{n}(V_j \setminus K_j) \quad \cup
-  \quad \bigcup_{j = 1}^{n}(A_j \setminus K_j)$$.
-  Now by the subadditivity of $\mu$, we get $\mu(D) < \epsilon$.
+  \quad \bigcup_{j = 1}^{n}(A_j \setminus K_j)$$
+  Now by the subadditivity of $\mu$, we get $\mu(D) < \epsilon$ and
+  we have proved the result for $A$ compact and $f$ simple.
 
-  Now for the general case, assume $0\le f < 1$ and $s_n$ be the
+  Now for the case when $0\le f < 1$, let $s_n$ be the
   sequence of simple functions $0 \le s_1 \le s_2 \le \ldots \le $
   with $\lim_{n \to \infty} s_n(x) = f(x)$. Let $t_n = s_n -
   s_{n-1}$, where $s_0 = 0$. Each $t_n$ is simple and $t_n = 0$ on
@@ -82,13 +83,21 @@
   \ t_n(x) \neq g_n(X)  \}$. Now the subadditivity of $\mu$ gives
   that $\mu(D) < \epsilon$.
 
-  Next, if $f$ is real valued, bounded, the result follows from
-  scaling $f$. Again if $f \ge 0$ is measurable, then we have
+  Next, if $f$ is non-negative, bounded, the result follows from
+  scaling $f$. Again if $f \ge 0$ is measurable and possibly
+  unbounded, we have
   $\cap_{n = 1}^{\infty} \{ x \in X  \ : \  f(x) \ge n \} =
   \emptyset$. Moreover $\mu(\{ f \ge 1 \}) \le \mu(A) < \infty$.
   Hence by the continuity of the measure from above, we get $\mu(\{ f
   \ge n \}) \to 0$. Hence we can replace $f$ with $f \chi_{f< n}$ for
   some appropriate $n$.
+
+  Now if the function is general complex, we can split it as the sum
+  and difference of four non-negative measurable functions and
+  continue the analysis. Finally if $A$ is not compact, we can find a
+  $K \subset A$ such that $ K$ is compact and $\mu(A \setminus K)$ is
+  arbitrarily small by the inner regularity of the measure $\mu$ for
+  finite sets.
 \end{proof}
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.26)  22 OCT 2024 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.26)  30 OCT 2024 09:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,7 +969,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 44.
 (./main.aux (./lectures/1.aux) (./lectures/2.aux) (./lectures/3.aux)
 (./lectures/4.aux) (./lectures/5.aux) (./lectures/6.aux) (./lectures/7.aux)
 (./lectures/8.aux) (./lectures/9.aux) (./lectures/10.aux) (./lectures/11.aux)
-(./lectures/12.aux) (./lectures/13.aux) (./lectures/14.aux))
+(./lectures/12.aux) (./lectures/13.aux) (./lectures/14.aux) (./lectures/15.aux)
+(./lectures/16.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
@@ -1099,7 +1100,9 @@ File: OMXyhex.fd
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc [2
+
+])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -1109,23 +1112,10 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.110 \include{lectures/1.tex}
-                               [1
-
-]
-
-Package marginnote Warning: Consecutive odd pages found.
-(marginnote)                Note, it is not recommended to use consecutive
-(marginnote)                odd pages in a double-ended document.
-(marginnote)                The pages of your document should always
-(marginnote)                be a sequence: odd-even-odd-even-...
-(marginnote)                Maybe you've forgotten a \cleardoublepage before
-(marginnote)                changing the page numbering on page 1.
-
-Package marginnote Info: Using workaround for absolute page number on input lin
-e 110.
+                               [1]
 \openout2 = `lectures/1.aux'.
 
-(./lectures/1.tex
+ (./lectures/1.tex
 Chapter 1.
 
 Overfull \hbox (75.05046pt too wide) in paragraph at lines 44--45
@@ -1235,11 +1225,11 @@ OT1/cmr/m/it/12 be a normed space and $\OML/cmm/m/it/12 x[]; x[]; [] ; x[] \OMS
  (./lectures/10.tex
 Chapter 10.
 Package marginnote Info: Margin note 28.1 is on absolute page 28 on input line 
-35.
-Package marginnote Info: xpos seems to be 89.62709pt on input line 35.
+40.
+Package marginnote Info: xpos seems to be 89.62709pt on input line 40.
 Package marginnote Info: Margin note 28.2 is on absolute page 28 on input line 
-54.
-Package marginnote Info: xpos seems to be 483.40186pt on input line 54.
+61.
+Package marginnote Info: xpos seems to be 483.40186pt on input line 61.
 [26
 
 
@@ -1247,11 +1237,8 @@ Package marginnote Info: xpos seems to be 483.40186pt on input line 54.
 
 ]
 Package marginnote Info: Margin note 29.1 is on absolute page 29 on input line 
-68.
-Package marginnote Info: xpos seems to be 483.98935pt on input line 68.
-Package marginnote Info: Margin note 29.2 is on absolute page 29 on input line 
-103.
-Package marginnote Info: xpos seems to be 467.69113pt on input line 103.
+82.
+Package marginnote Info: xpos seems to be 483.98935pt on input line 82.
 ) [27]
 \openout2 = `lectures/11.aux'.
 
@@ -1313,28 +1300,49 @@ Chapter 14.
 
 
 ]) [35]
+\openout2 = `lectures/15.aux'.
 
-LaTeX Warning: Empty bibliography on input line 125.
+ (./lectures/15.tex
+Chapter 15.
+[36
+
+
+
+
+]) [37]
+\openout2 = `lectures/16.aux'.
+
+ (./lectures/16.tex
+Chapter 16.
+[38
+
+
+
+
+]) [39]
+
+LaTeX Warning: Empty bibliography on input line 127.
 
 (./main.aux (./lectures/1.aux) (./lectures/2.aux) (./lectures/3.aux)
 (./lectures/4.aux) (./lectures/5.aux) (./lectures/6.aux) (./lectures/7.aux)
 (./lectures/8.aux) (./lectures/9.aux) (./lectures/10.aux) (./lectures/11.aux)
-(./lectures/12.aux) (./lectures/13.aux) (./lectures/14.aux))
+(./lectures/12.aux) (./lectures/13.aux) (./lectures/14.aux) (./lectures/15.aux)
+(./lectures/16.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7784FF0A4D43A72E4F4A6303D12B57B5;927.
+(rerunfilecheck)             Checksum: 9A8A223B7D7D1DA30A5625B06050F7DB;1001.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31321 strings out of 476076
- 586582 string characters out of 5793775
- 1944187 words of memory out of 5000000
- 52707 multiletter control sequences out of 15000+600000
+ 31401 strings out of 476076
+ 588184 string characters out of 5793775
+ 1942187 words of memory out of 5000000
+ 52745 multiletter control sequences out of 15000+600000
  580707 words of font info for 116 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  84i,12n,87p,950b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1355,10 +1363,10 @@ mbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></us
 r/share/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb></usr/share/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public
 /yhmath/yhcmex.pfb>
-Output written on main.pdf (36 pages, 329974 bytes).
+Output written on main.pdf (41 pages, 341150 bytes).
 PDF statistics:
- 497 PDF objects out of 1000 (max. 8388607)
- 414 compressed objects within 5 object streams
- 158 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 186 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

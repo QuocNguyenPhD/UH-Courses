@@ -1,0 +1,80 @@
+% TeX_root = ../main.tex
+
+\chapter{}
+
+\begin{lemma}
+  Let $H$ be a Hilbert space and $K$ be a nontrivial closed subspace.
+  Let $\eta \in H$. Then $\xi \in K$ satisfy $\|\xi - \eta\| = d(\eta, K)$ iff
+  $\xi - \eta \perp K$.
+\end{lemma}
+\begin{proof}
+  Let $K$ be a closed subspace of $H$ and let $\eta \in H$. Let $\xi
+  \in K$ such that $\|\eta - \xi\|= d(\eta, K)$. Then for all $\rho
+  \in K$ and $t > 0$, we have
+  \begin{align*}
+    \|\eta - \xi\|^2 &\le \|\eta - (\xi + t\rho)\|^2  \\
+    & = \| \eta - \xi -  t\rho\|^2 \\
+    & = \|\eta - \xi\|^2 + t^2\|\rho\|^2 - 2t\Re \langle \eta - \xi ,
+    \rho \rangle
+  \end{align*}
+  Hence we see that $|2\Re \langle \eta - \xi , \rho \rangle| \le t\|\rho\|^2$
+  Since $t>0$ was arbitrary, limiting it to zero, we get $\Re \langle
+  \eta - \xi ,  \rho \rangle = 0$. Replacing $\rho$ with $-i \rho$
+  will give the imaginary part is also zero.
+
+  Conversely, assume that $(\eta - \xi) \perp K$. Then  for all $\rho
+  \in K$, we have
+  \begin{align*}
+    \|\eta - \rho\|^2 &= \|(\eta - \xi) + (\xi - \rho)\|^2 \\
+    & = \|\eta - \xi\|^2 + \|\xi - \rho\|^2 \\
+    & \ge \|\eta  - \xi\|^2
+  \end{align*}
+\end{proof}
+
+\begin{proposition}
+  $I-P_K = P_{K^\perp}$
+\end{proposition}
+\begin{proof}
+  Let $x \in X$ and $k \in K$. Then
+  \begin{align*}
+    \langle (I - P_k)(x), k \rangle &= \langle  x - P_k(x) , k \rangle \\
+    &= \langle  x , k \rangle - \langle P_k(x) ,  k \rangle  \\
+    &= \langle x , k \rangle  - \langle x , P_k(k) \rangle \\
+    &= \langle x , k \rangle  - \langle  x , k \rangle  \\
+    &= 0
+  \end{align*}
+  Shows that
+\end{proof}
+
+\begin{proposition}
+  Let $K$ be a closed subspace of $H$. Let $E \subset K$ be an o.n.b
+  for $K$. Extend $E$ to an o.n.b $\tilde{E}$ for $H$. Then \[
+    P_K|_E = I_K, \quad P_K|_{\tilde{E} \setminus E} = 0
+  \]
+\end{proposition}
+
+\begin{remark}[Parserval's Inequality]
+  Let $H$ be a Hilbert space. Let $E$ be an orthonormal set. Then for
+  every vector $\eta \in H$, \[
+    \|\eta\|^2 \ge \sum_{e \in E} |\langle \eta ,  e \rangle |^2
+  \]
+\end{remark}
+
+\begin{lemma}
+  Let $S$ be a nonempty subset of $H$. Then \[
+    (S^\perp)^\perp  = \overline{\textrm{Span}(S)}
+  \]
+\end{lemma}
+
+\begin{corollary}
+  Let $E$ be an orthonormal subset of $H$. Then the following are equivalent.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $E$ is an o.n.b
+    \item $(E^\perp)^\perp = H$
+    \item $\overline{\textrm{Span}(S)} = H$
+    \item $\|\eta\|^2 = \sum_{e \in E} |\langle \eta ,  e \rangle
+      |^2, \ \forall \eta \in H$
+  \end{enumerate}
+\end{corollary}
+
+

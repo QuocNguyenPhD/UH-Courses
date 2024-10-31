@@ -1,0 +1,106 @@
+% TeX_root = ../main.tex
+
+\chapter{}
+
+\begin{theorem}
+  Let $H$ be a Hilbert space and let $C$ be a non-empty closed convex
+  subset of $H$. Then there exist a unique vector $x \in C$ such that
+  $\|x\| \le \|\eta\|$ for all $\eta \in C$.
+\end{theorem}
+\begin{proof}
+  Let $d = \inf \{ \|\eta\|  \ : \ \eta \in C  \}$ and choose a
+  sequence $ \eta_n \in C$  such that $\|\eta_n\| \to d$. Let $
+  \epsilon > 0$. Choose $N \in \mathbb{N}$ such that $\|\eta_n\|^2 <
+  d^2 + \epsilon$ for all $n \ge N$. Then for all $m,n \ge N$, we have \[
+    \|\eta_n - \eta_m\|^2 = 2(\|\eta_n\|^2 + \|\eta_m\|^2) - 4 \|
+    \frac{1}{2}(\eta_n + \eta_m) \|^2 \le 4(d^2  + \epsilon) - 4d^2 = 4 \epsilon
+  \]
+  Hence the sequence $\eta_n$ is Cauchy and hence convergent since
+  the space is complete. Let $\eta = \lim_{n \to \infty} \eta_n$.
+  Since $C$ is closed $\eta \in C$ and clearly $\|\eta\| = d$.
+
+  To see the uniqueness, assume $\alpha \in C$, and $\| \alpha\| = d$. Then
+  \begin{align*}
+    \|\eta - \alpha\|^2 &= 2(\|\eta\|^2 + \|\alpha\|^2) - 4 \|
+    \frac{1}{2}(\eta + \alpha) \|^2 \\
+    & \le 4d^2 - 4d^2 = 0
+  \end{align*}
+  Verify the second inequality.
+\end{proof}
+
+\begin{corollary}
+  Let $\eta \in H$. Then there exist a unique vector $x \in C$ such
+  that $d(\eta, C) = \|x - \eta\|$
+\end{corollary}
+\begin{proof}
+  \textcolor{red}{Apply above theorem to $C^\prime = C \setminus \{ \eta \}$.}
+\end{proof}
+
+\begin{proposition}[Pythagoras Theorem]
+  Let $ x, y \in H$ an inner product space, and $x \perp y$, then
+  $\|x + y\|^2 = \|x\|^2 + \|y\|^2$.
+\end{proposition}
+
+\begin{lemma}
+  \label{lem:15}
+  Let $H$ be a Hilbert space and $K$ be a nontrivial closed subspace.
+  Let $\eta \in H$. Then $\xi \in K$ satisfy $\|\xi - \eta\| = d(\eta, K)$ iff
+  $\xi - \eta \perp K$.
+\end{lemma}
+
+\begin{theorem}[Reisz Representation Theorem]
+  Let $H$ be a Hilbert space and $f \in H^*$. Then there exists a
+  unique $\eta_f \in H$ such that $f(x) = \langle x , \eta_f \rangle $
+  for all $ x \in H$. The map $\phi: H^* \to H := f \to \eta_f$ is
+  conjugate linear isometric bijection.
+\end{theorem}
+\begin{proof}
+  \textcolor{red}{verify}
+\end{proof}
+
+\begin{theorem}
+  Let $H_1, H_2$ be Hilbert spaces, and $T: H_1 \to H_2$ be a bounded
+  linear map. Then there exists a unique bounded linear map $T^*: H_2
+  \to H_1$ satisfying $\langle  Tx , y \rangle_{H_2} = \langle x ,
+  T^*y \rangle_{H_1}$ for all $x \in H_1, y \in H_2$.
+\end{theorem}
+\begin{proof}
+  For every given $y \in H_2$ define a linear functional $f^y: H_1
+  \to \mathbb{C}$ as $f^y(x) = \langle Tx , y \rangle$. Since $f^{y}$
+  is bounded, $f^y \in H_1^*$. Hence by Reisz representation, there
+  is a unique $T^*(y) \in H_1$ such that $\langle  Tx , y \rangle =
+  \langle x , T^*y \rangle$.
+
+  Uniquness follows from the fact that in any inner product space
+  $X$, if $x, y \in X$ such that $ \langle x , z \rangle = \langle  y
+  , z \rangle $ for all $z \in X$, then $x = y$
+  \textcolor{red}{Verify the linearity}.
+\end{proof}
+
+\begin{theorem}
+  Let $H$ be a Hilbert space and $K$ a closed subspace. For every
+  $\eta \in H$, denote by $P_K(\eta)$, the unique closest vector in
+  $K$, closest to $\eta$. Then
+  \begin{enumerate}[label=(\arabic*)]
+    \item $P_K: H \to H$ is linear, bounded with $\|P_K\| = 1$ and idempotent.
+    \item $P_K^* = P_K$ (self-adjoint)
+  \end{enumerate}
+\end{theorem}
+\begin{proof}
+  \begin{enumerate}[label=(\arabic*)]
+    \item Let $\eta_1, \eta_2 \in H$ and $\alpha \in \mathbb{C}$.
+      Then for all $\xi \in K$, we have
+      \begin{align*}
+        \langle  \alpha \eta_1
+        +\eta_2 - \alpha P_K( \eta_1) - P_K(\eta_2) , \xi \rangle &=
+        \alpha \langle \eta_1 - P_K(\eta_1) , \xi  \rangle + \langle
+        \eta_2 - P_K(\eta_2) , \xi  \rangle  \\
+        &= 0
+      \end{align*}
+
+      If $K \neq \{ 0\}$ and $0 \neq $
+    \item
+  \end{enumerate}
+\end{proof}
+
+

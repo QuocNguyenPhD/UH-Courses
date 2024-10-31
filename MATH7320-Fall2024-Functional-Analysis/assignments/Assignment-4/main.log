@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.26)  25 OCT 2024 10:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.26)  28 OCT 2024 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -887,25 +887,21 @@ LaTeX Font Info:    Trying to load font information for OMX+yhex on input line
 (/usr/share/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
-) [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
-Overfull \hbox (3.93663pt too wide) detected at line 329
-[] [] \OML/cmm/m/it/12 gMg[][] \OMS/cmsy/m/n/12 ^^T \OT1/cmr/m/n/12 (\OMS/cmsy/
-m/n/12 j\OML/cmm/m/it/12 M\OMS/cmsy/m/n/12 j ^^@ \OT1/cmr/m/n/12 1)\OMS/cmsy/m/
-n/12 j\OML/cmm/m/it/12 G \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 M\OMS/cmsy/m/n/12 j
- \OT1/cmr/m/n/12 + 1 = []\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G\OMS/cmsy/m/n/12 j
- \OT1/cmr/m/n/12 + [] = \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G\OMS/cmsy/m/n/12 j 
-\OT1/cmr/m/n/12 + (1 \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 
-< \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G\OMS/cmsy/m/n/12 j
+)
+Overfull \hbox (5.49849pt too wide) in paragraph at lines 148--153
+\OT1/cmr/m/n/12 Thus the only ex-treme points of $\OML/cmm/m/it/12 B[]$ \OT1/cm
+r/m/n/12 are those se-quences $\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 = (\OML/cmm/m
+/it/12 x[]; x[]; []\OT1/cmr/m/n/12 )$
  []
 
-[5]
+[1
 
-LaTeX Warning: Empty bibliography on input line 393.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
+
+LaTeX Warning: Empty bibliography on input line 380.
 
 [6]
-This exam contains 8 questions with 2 parts, 0 subparts, and 0 subsubparts.
+This exam contains 2 questions with 0 parts, 0 subparts, and 0 subsubparts.
 (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -918,10 +914,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20205 strings out of 476076
- 341725 string characters out of 5793775
- 1949187 words of memory out of 5000000
- 42059 multiletter control sequences out of 15000+600000
+ 20177 strings out of 476076
+ 341342 string characters out of 5793775
+ 1959187 words of memory out of 5000000
+ 42028 multiletter control sequences out of 15000+600000
  574911 words of font info for 97 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  66i,11n,81p,677b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -933,14 +929,12 @@ mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (6 pages, 161554 bytes).
+/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (6 pages, 149716 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
