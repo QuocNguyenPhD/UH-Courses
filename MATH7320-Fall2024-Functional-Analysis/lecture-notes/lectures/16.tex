@@ -77,4 +77,46 @@
   \end{enumerate}
 \end{corollary}
 
+\begin{proposition}
+  Let $K$ be a closed subspace of a Hilbert space $H$. Then $P_K = P_K^*$
+\end{proposition}
+\begin{proof}
+  Let $k \in K$ and $x \in H$. Then \[
+    \langle x , P_K^*(k) \rangle = \langle P_K(x) , k \rangle =
+    \langle  P_K(x)-x , k \rangle + \langle x , k \rangle = \langle x
+    , k \rangle
+  \]
+  for all $x \in H$.
+  Hence $P_K^*(k) = k$.
+  Conversely, \textcolor{red}{verify}
+\end{proof}
+
+\begin{theorem}
+  Let $P \in B(H)$ be an idempotent. Then the following are equivalent.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $P = P_K$ for some closed subspace $K \leqslant H$
+    \item $P = P^*$
+    \item $\|P\| = 1$
+  \end{enumerate}
+\end{theorem}
+\begin{proof}
+  $1 \implies 2, 1 \implies 3$ is easily known from above.
+  To see $2 \implies 1$. Let $K = \textrm{Im}(P)$. Let $\rho \in
+  K^\perp$. Then for all $\eta \in H$, \[
+    \langle P(  \rho) ,  \eta \rangle  = \langle \rho ,  P^*(\eta)
+    \rangle  = \langle \rho ,  P(\eta) \rangle = 0
+  \]
+  So $P|_{K^\perp} = 0$. Hence $P = P_k$.
+
+  Conversely, assume $P \neq P_K$. Then $\exists \rho \in K^\perp$
+  such that $P(\rho) = 0$. For each $n \in \mathbb{N}$, we have
+  $\|\rho + n P(\rho)\|^2 = \|\rho\|^2 + n^2 \|P(\rho)\|^2$. And \[
+    \|P(\rho + n P(\rho))\|^2 = (n+1)^2 \|P(\rho)\|^2
+  \]
+  So for large $n$, we have \[
+    \|P(\rho + n P(\rho))\| > \|\rho + P(\rho)\|
+  \]
+  so $\|P\| > 1$.
+\end{proof}
+
 

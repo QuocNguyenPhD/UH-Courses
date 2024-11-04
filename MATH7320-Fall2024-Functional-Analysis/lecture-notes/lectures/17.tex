@@ -1,0 +1,60 @@
+% TeX_root = ../main.tex
+
+\chapter{}
+
+\begin{definition}
+  let $X, Y$ be Banach Spaces. A linear map $T : X \to Y$ is called a
+  compact operator if $\overline{T(B_1^X)}$ is compact. We denote by
+  $K(X, Y)$, the set of all compact operators.
+\end{definition}
+
+\begin{example}
+  If either $X$ or $Y$ is finite, then every linear map $T: X \to Y$
+  is compact. If $X$ be any infinite dimensional Banach space. Then
+  $T = \textrm{Id} : X \to X$ is not compact.
+\end{example}
+
+\begin{definition}
+  $T: X \to Y$ is called a finite rank if the dimension of $T$ is
+  finite. Then the dimension of the image is called the rank of the
+  operator. Let $F(X, Y)$ denote finite rank operators.
+\end{definition}
+
+\begin{lemma}
+  Every compact operator is bounded.
+\end{lemma}
+\begin{proof}
+  Every compact set is bounded in any metric space.
+\end{proof}
+
+\begin{theorem}
+  Let $H$ be a Hilbert space. Then $K(H) = \overline{F(H)}^{\|\cdot\|}$
+\end{theorem}
+\begin{proof}
+  It is evident that $K(H) \subset K(H)$. We'll now show that
+  $\overline{F(H)}\subset K(H) $
+  Let $T_n$ be a sequence in $F(H)$ and $T_n \to T \in B(H)$ (in
+  norm). We'll show that the image of $T(B_1(H))$ is closed and
+  totally bounded. Then since the space is complete, this would give
+  a convergent subsequence and hence would be complete.
+
+  Let $\epsilon > 0$ be given. Then there exist some $N \in
+  \mathbb{H}$ such that $\|T_n - T\| < \epsilon$. Since $T_N$ is
+  compact, $\exists \eta_1, \eta_2, \ldots \eta_k \in B^H_1$ \[
+    \overline{T_N(B_1^H)} \subset \bigcup_{\eta \in  B_1^H}
+    B_\epsilon(T_N(\eta))
+  \]
+  Hence by the compactness of $\overline{T_N(B_1^H)}$ it has a finite
+  open cover. Then \[
+    \overline{T_N(B_1^H)} \subset \bigcup_{i = 1}^{n}B_\epsilon(T_N(\eta))
+  \]
+  Let $\eta \in B_1^H$ be arbitrary. Then $\exists i \le j \le k$
+  such that $\|T_N(\eta) - T_N(\eta_i)\| < \epsilon$. Then
+  \begin{align*}
+    \|T(\eta) - T(\eta_i)\| \le \|T(\eta) - T_N(\eta)\| + \|T_N(\eta)
+    - T_N(\eta_i)\| + \|T_N(\eta_i) - T(\eta_i)\| \\
+    & < 3 \epsilon
+  \end{align*}
+\end{proof}
+
+

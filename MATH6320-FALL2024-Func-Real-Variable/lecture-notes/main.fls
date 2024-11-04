@@ -329,6 +329,9 @@ INPUT lectures/18.aux
 INPUT ./lectures/19.aux
 INPUT ./lectures/19.aux
 INPUT lectures/19.aux
+INPUT ./lectures/20.aux
+INPUT ./lectures/20.aux
+INPUT lectures/20.aux
 OUTPUT main.aux
 INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
 INPUT ./main.out
@@ -556,6 +559,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT ./lectures/20.tex
+OUTPUT lectures/20.aux
+INPUT ./lectures/20.tex
+INPUT ./lectures/20.tex
+INPUT lectures/20.tex
 INPUT main.aux
 INPUT ./lectures/1.aux
 INPUT ./lectures/1.aux
@@ -611,6 +619,9 @@ INPUT lectures/18.aux
 INPUT ./lectures/19.aux
 INPUT ./lectures/19.aux
 INPUT lectures/19.aux
+INPUT ./lectures/20.aux
+INPUT ./lectures/20.aux
+INPUT lectures/20.aux
 INPUT ./main.out
 INPUT ./main.out
 INPUT main.run.xml

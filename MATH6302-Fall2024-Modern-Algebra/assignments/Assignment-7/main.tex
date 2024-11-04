@@ -1,0 +1,188 @@
+% initial settings
+\documentclass[12pt]{exam}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+\usepackage{url,hyperref}
+
+\usepackage{amsmath} % math symbols, matrices, cases, trig functions,
+% var-greek symbols.
+\usepackage{amsfonts} % mathbb, mathfrak, large sum and product symbols.
+\usepackage{amssymb} % extended list of math symbols from AMS.
+% https://ctan.math.washington.edu/tex-archive/fonts/amsfonts/doc/amssymb.pdf
+\usepackage{amsthm} % theorem styling.
+\usepackage{mathrsfs} % mathscr fonts.
+\usepackage{yhmath} % widehat.
+\usepackage{empheq} % emphasize equations, extending 'amsmath' and 'mathtools'.
+\usepackage{bm} % simplified bold math. Do \bm{math-equations-here}
+
+% geometry of paper
+\geometry{
+  a4paper, % 'a4paper', 'c5paper', 'letterpaper', 'legalpaper'
+  asymmetric, % don't swap margins in left and right pages. as
+  % opposed to 'twoside'
+  centering, % to center the content between margins
+  bindingoffset=0cm,
+}
+
+% hyprlink settings
+\hypersetup{
+  colorlinks = true,
+  linkcolor = {red!60!black},
+  anchorcolor = red,
+  citecolor = {green!50!black},
+  urlcolor = magenta,
+}
+
+% theorem styles
+\theoremstyle{plain} % default; italic text, extra space above and below
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\theoremstyle{definition} % upright text, extra space above and below
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{remark} % upright text, no extra space above or below
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{note}{Note} %'Notes' in italics and without counter
+
+% renewcommands for counters
+\newcommand{\propositionautorefname}{Proposition}
+\newcommand{\definitionautorefname}{Definition}
+\newcommand{\lemmaautorefname}{Lemma}
+\newcommand{\remarkautorefname}{Remark}
+\newcommand{\exampleautorefname}{Example}
+
+\addbibresource{articles.bib}
+
+\begin{document}
+
+\title{MATH 6320 \\ Homework 7}
+
+% author list
+\author{
+  Joel Sleeba \\
+}
+
+\maketitle
+\printanswers
+\unframedsolutions
+
+\begin{questions}
+
+  \question
+  \textcolor{red}{not finished}
+
+  \begin{solution}
+
+  \end{solution}
+
+  \question
+  \begin{solution}
+    Since $r \in D_8$, has order $4$, if $\phi: D_8 \to D_8$ is any
+    automorphism, then $\phi(r)$ must also have the same order. Hence
+    the possible $\phi(r)$ are $r, r^{-1} \in D_8$. Similarly  since
+    $|s| = 2$, $\phi(s)$ also  must have order $2$, which gives
+    $\phi(s) \in \{ s, r^2, sr, sr^2, sr^3\}$. But since $\phi(r) \in
+    \{ r , r^3  \}$, if $\phi(s) = r^2$, $\phi(D_8) = \langle  r
+    \rangle $, and $\phi$ will not be an automorphism. Hence $\phi(s)
+    \in \{  s, sr, sr^2, sr^3 \}$. Since $s, r$ generate $D_8$, and
+    each of them have $4$ and $2$ possible options, by the counting
+    argument, $\textrm{Aut}(D_8)$ can have at most 8 elements.
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+  \begin{solution}
+    Since $D_8 \trianglelefteq D_{16}$, we see that $\phi: D_{16} \to
+    \textrm{Aut}(D_8): g \to \phi_g$, where $\phi_g: h \to ghg^{-1}$
+    is a well defined map. Since
+    \begin{align*}
+      \phi_g \phi_{g^\prime}(h) & = \phi_g(g^\prime h(g^\prime)^{-1}) \\
+      & = gg^\prime h (g^\prime)^{-1} g^{-1} \\
+      & = (gg^\prime) h (gg^\prime)^{-1} \\
+      & = \phi_{gg^\prime}(h)
+    \end{align*}
+    we see that $\phi$ is a group homomorphism. Moreover, we know
+    that $\textrm{Ker}(\phi) = C_{D_{16}}(D_8) = \langle r \rangle =
+    \{r, e\}$. Hence by
+    the first isomorphism theorem, we see that $\phi(D_{16}) =
+    \frac{D_{16}}{\langle r^4 \rangle} \cong D_8$. Moreover,
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+
+  \begin{solution}
+    From what we proved in the class, we know that if $H \leqslant
+    G$, then $N_G(H)/C_G(H)$ is isomorphic to a subgroup of
+    $\textrm{Aut}(H)$. Hence in the question, we know that
+    $N_{S_p}(P)/C_{S_p}(P)$ is isomorphic to a subgroup of $\textrm{Aut}(P)$.
+
+    Since $P$ is a cyclic group of order $p$, $P \cong
+    \mathbb{Z}/p\mathbb{Z}$ and hence the number of automorphisms of
+    $P$ are precisely $p-1$.
+
+    Also $C_{S_p}(P) = P$. To show this, we first notice that every
+    non-identity element in $P$ must be a $p$-cycle. If $p = 2$,
+    $P = S_p$ and we've noting to prove. Hence assume $p >
+    2$, then without loss of generality, assume $(1 \ 2 \ldots \ p)
+    \in P$. Then $(1\ 2)(1 \ 2 \ldots \ p) = (2 \ 3 \ldots\ p) \neq
+    (1 \ 3 \ 4 \ldots p) = (1 \ 2 \ldots \ p)(1\ 2)$.
+  \end{solution}
+
+  \question
+  \begin{solution}
+    Let $(1, k) \in C_K(H)$. Then for any $(h, 1) \in G$, $$(h, k) =
+    (h\varphi(1)(1), k) = (h, 1)(1,k)  = (1, k)(h, 1) =  (1\varphi(k)(h), k)$$
+    forces $\varphi(k)(h) = h$. Since this is true for all $h \in H$,
+    we see that $\phi(k)$ is the trivial automorphism of $H$. Hence
+    $k \in \textrm{Ker}(\phi)$.
+
+    Conversely, if $k \in \textrm{Ker}(\phi)$, then $\phi(k)(h) = h$
+    for all $h \in H$. Then for any $(h, 1) \in H$(identified as a
+    subgroup of $G$) \[
+      (h, 1)(1, k) = (h \varphi(1)(1), k) = (h, k) = (\phi(k)(h), k)
+      = (1, k)(h, 1)
+    \]
+    shows that $(1, k) \in C_K(H)$. Hence $C_K(H) = \textrm{ Ker}(\varphi)$.
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+
+  \begin{solution}
+    We know that $\textrm{Hol}(H) = H \rtimes_\phi \textrm{Aut}(H)$,
+    where $\phi: \textrm{Aut}(H) \to \textrm{Aut}(H)$ is the identity map.
+    \begin{parts}
+      \part We notice that $H = Z_2 \times Z_2 \cong V_4$, the Klein
+      4 group. Therefore, let $H = V_4 = \{ 1, a, b, c \}$. Since we know that
+      any two of $a, b, c$ generate the group $V_4$ we see that
+      any permutation of $a, b, c$ will be a group automorphism.
+      Hence we see that $\textrm{Aut}(H) \cong S_3$. Hence we see
+      that $\textrm{Hol}(Z_2 \times Z_2) \cong H \rtimes K$, where $H
+      = Z_2 \times Z_2$ and $K \cong S_3$.
+      Also, $|H \rtimes K| = |H \times K| = |H| \times |K| = 4 \times 6 = 24$
+
+      \part
+    \end{parts}
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+  \begin{solution}
+    We know that since $75 = 3\times5^2$, the fundamental theorem for
+    Abelian groups immediately gives two groups $Z_3 \times Z_{5^2}
+    \cong Z_{75}$ and $Z_3 \times Z_5 \times Z_5$.
+  \end{solution}
+
+\end{questions}
+\printbibliography[heading=bibintoc]
+\end{document}
+
+
