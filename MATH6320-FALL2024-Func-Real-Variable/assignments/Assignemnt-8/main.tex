@@ -255,6 +255,45 @@
     for general $f \in L^1(m)$.
   \end{solution}
 
+  \begin{proposition}
+    If $\mu$ is a translation invariant measure on $X$, for any measurable
+    function $f: X \to \mathbb{C}$, \[
+      \int f \ d \mu = \int f_t \ d \mu
+    \]
+    where $f_t(x) = f(x-t)$ for all $t, x \in X$
+  \end{proposition}
+  \begin{proof}
+    We'll prove this for non-negative function $f$, then the general
+    case will follow from decomposing a complex valued $f$ into
+    linear combinations of 4 non-negative valued functions.
+
+    Let $f$ be non-negative measurable function and $0 \le s \le f$ be a
+    measurable simple function. Let \[
+      s = \sum_{i = 1}^{n} a_i \chi_{A_i}
+    \]
+    Then, \[
+      s_t(x) = \sum_{i = 1}^{n} a_i \chi_{A_i}(x-t) \le f(x-t) = f_t(x)
+    \]
+    Hence we get $s_t \le f_t$. Conversely, let $0 \le h \le f_t$ be a
+    simple measurable function of the form
+    \[
+      h(x) = \sum_{i = 1}^{m} b_i \chi_{B_i}
+    \]
+    Then, \[
+      h_{-t}(x) = \sum_{i = 1}^{m} b_i \chi_{B_i}(x+t) \le f_t(x+t) = f(x)
+    \]
+    Hence we get $h_{-t} \le f$. Thus we have shown a correspondence
+    between simple functions under $f$ and $f_t$. Moreover the
+    translation invariance of $\mu$ gives \[
+      \int h \ d \mu = \sum_{i = 1}^{m} b_i \mu(B_i) = \sum_{i =
+      1}^{m} b_i \mu(B_i + t) =  \int  h_{-t} \ d \mu
+    \]
+    Thus taking supremums over all measurable simple functions under
+    $f$ and $f_t$, we see that \[
+      \int f \ d \mu = \int f_{t} \ d \mu
+    \]
+  \end{proof}
+
 \end{questions}
 \printbibliography[heading=bibintoc]
 \end{document}
