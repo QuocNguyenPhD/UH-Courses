@@ -34,3 +34,5 @@
 \contentsline {chapter}{\numberline {17}}{44}{chapter.17}%
 \contentsline {chapter}{\numberline {18}$L^{p}$ Spaces}{47}{chapter.18}%
 \contentsline {chapter}{\numberline {19}}{49}{chapter.19}%
+\contentsline {chapter}{\numberline {20}}{52}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Approximations by simple or continuous functions}{54}{section.20.1}%
