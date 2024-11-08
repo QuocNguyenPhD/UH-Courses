@@ -51,10 +51,45 @@
   Let $\eta \in B_1^H$ be arbitrary. Then $\exists i \le j \le k$
   such that $\|T_N(\eta) - T_N(\eta_i)\| < \epsilon$. Then
   \begin{align*}
-    \|T(\eta) - T(\eta_i)\| \le \|T(\eta) - T_N(\eta)\| + \|T_N(\eta)
+    \|T(\eta) - T(\eta_i)\| &\le \|T(\eta) - T_N(\eta)\| + \|T_N(\eta)
     - T_N(\eta_i)\| + \|T_N(\eta_i) - T(\eta_i)\| \\
     & < 3 \epsilon
   \end{align*}
+
+  Conversely, let $T \in B(H)$ be compact and $\epsilon>0$ be given.
+  So $\exists \eta_1, \eta_2, \ldots , \eta_m \in B_1(H)$ such that
+  \begin{align*}
+    T(B_1(H)) &\subset \bigcup_{i = 1}^{n}B_\epsilon(T(\eta_i))
+  \end{align*}
+  Assume that $H$ is separable. Let $\{ e_n  \ : \  n \in
+  \mathbb{N} \}$ be an orthonormal basis for $H$ and let $P_n =
+  P_{\textrm{Span}\{e_1 , e_2 , \ldots , e_n\}}$. Then choose $ N>0$
+  such that for all $n >N$, $\forall i = 1, 2, \ldots m$, \[
+    \|(P_nT - T)(\eta_i)\| < \epsilon
+  \]
+  Then $\forall \xi \in H$ with $\|\xi\| = 1$. Choose $1 \le j \le
+  m$ such that $\|T(\xi) - T(\eta_j)\| < \epsilon$. Then
+  \begin{align*}
+    \|P_nT(\xi) - T(\xi)\| & \le \|P_nT(\xi) - P_nT(\eta_j)\| +
+    \|P_nT(\eta_j) - T(\eta_j)\| + \|T(\eta_j) - T(\xi)\| \\
+    &< 3\epsilon
+  \end{align*}
+
+  Which gives that $\|P_nT - T\| < 3\epsilon$ for all $n \in \mathbb{N}$.
+
+  The generalization of the case when $H$ is non-separable, will use
+  the fact that $T(H)$ is separable and using an orthonormal basis
+  for the pre-image of $T(H)$, which will again be separable.
 \end{proof}
+
+\begin{remark}
+  Let $K$ be a separable Hilbert space. Let $\{ e_n \ : \ n \in
+  \mathbb{N} \}$ be an orthonormal basis for $K$. For each $n \in
+  \mathbb{N}$, let $P_n$ be the projection to the $\textrm{Span}\{
+  e_1 , e_2 , \ldots , e_n \}$. Then for all $ x \in K$ \[
+    P_n(x) \to x
+  \]
+  pointwise
+\end{remark}
 
 

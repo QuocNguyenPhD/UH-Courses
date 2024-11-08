@@ -1,0 +1,92 @@
+% TeX_root = ../main.tex
+
+\chapter{}
+\begin{lemma}
+  If $T \in B(H)$ is compact, then $T(H)$ is separable.
+\end{lemma}
+\begin{proof}
+  \textcolor{red}{verify}
+\end{proof}
+
+\begin{corollary}
+  The set $K(H)$ of all compact operators on $  H$ is a closed
+  two-sided ideal in $B(H)$.
+\end{corollary}
+\begin{proof}
+  \textcolor{red}{verify}. Use the fact that compact operators are
+  the closure of finite rank operators.
+\end{proof}
+
+\begin{corollary}
+  $T \in K(H)$ implies $T^* \in K(H)$.
+\end{corollary}
+\begin{proof}
+  \textcolor{red}{verify}. Use the fact that $T$ is finite rank
+  implies $T^*$ is finite rank.
+\end{proof}
+
+\begin{example}
+  Let \[
+    T: L^2([0, 1], m) \to L^2([0, 1], m)
+  \]
+  be defined as $T(f)(x) = xf(x)$. Prove that $T = T^*$ and that $T$
+  has no eigenvectors.
+
+  Only for joseph: If $\xi = \eta$ almost everywhere, then show that  $f \xi = f
+  \eta$ almost everywhere if $ f \in C([0, 1])$
+\end{example}
+\begin{proof}
+  \textcolor{red}{Homework}
+\end{proof}
+
+\begin{example}
+  Let $\alpha_n$ be a bounded sequence in $\mathbb{C}$. Consider $T :
+  \ell^2 \to \ell^2$, such that \[
+    T(\delta_n) = \alpha_n \delta_n
+  \]
+  for all $n \in \mathbb{N}$. Then $T$ is bounded with $\|T\| =
+  \|(\alpha_n)\|_\infty$.
+\end{example}
+
+\begin{example}
+  Prove that the $T$ above is compact if and only if $(\alpha_n) \in c_{\bf 0}$
+  Prove that $T^*(\delta_n) = \overline{\alpha_n}\delta_n$
+\end{example}
+\begin{proof}
+  \textcolor{red}{Homework}
+\end{proof}
+
+\begin{theorem}
+  Let $H$ be separable Hilbert space and $T\in K(H)$ be normal. i.e
+  $TT^* = T^*T$. Then there exist an orthonormal basis $\{ e_n  \ :
+  \  n \in \mathbb{N} \}$ of $H$, and a sequence $(\alpha_n) \in
+  c_{\bf 0}$, such that $T(e_n) = \alpha_n e_n$.
+\end{theorem}
+
+\begin{lemma}
+  Let $T \in K(H)$ be self-adjoint. Then $\exists 0 \neq \eta \in
+  \mathbb{C}$ such that $ \textrm{Ker}(T - \lambda I) \neq \{ 0 \}$.
+\end{lemma}
+
+\begin{lemma}
+  If $T$ is a compact operator, and $0 \neq \lambda \in \mathbb{C}$,
+  Then $\textrm{Ker}(T - \lambda I)$ if finite dimensional.
+\end{lemma}
+
+\begin{definition}
+  Let $T \in B(H)$. A subspace $W \leqslant H$ is said to be
+  invariant under $T$ if $T(W) \subset W$. We say $W$ reduces $T$, if
+  $T(W) \subset W$ and $T(W^\perp) \subset W^\perp$
+\end{definition}
+
+\begin{example}
+  Let $T \in B(H)$.
+  Prove that $W \subset H$ is invariant under $T$ if and only if $P_WT = TP_W$
+  Prove that $W$ reduces $T$ if and only if $P_WT = TP_W$ and
+  $P_{W^\perp}T = T P_{W^\perp}$.
+\end{example}
+\begin{proof}
+  \textcolor{red}{Homework}
+\end{proof}
+
+

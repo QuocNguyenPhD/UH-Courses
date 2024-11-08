@@ -91,25 +91,4 @@
   \end{enumerate}
 \end{proof}
 
-\section{Approximations by simple or continuous functions}
-\begin{theorem}
-  Let $(X, \mathcal{M}, \mu)$ be a measure space, denote by $S$, the
-  collection of simple measurable functions with finite measurable support.
-  Then for $1 \le p \le \infty$, $ S \subset L^p(\mu)$ and $S$ is
-  dense in $L^p(\mu)$.
-\end{theorem}
-\begin{proof}
-  Given $f \in L^p(\mu)$, we need to find a sequence $s_n$ in $S$
-  such that $s_n \to f$ in $L^1(\mu)$. First suppose that $f: X \to
-  [0, \infty)$. We know a sequence of simple measurable functions
-  $s_n$ such that $0 \le s_1 \le s_2 \le \ldots$ and \[
-    \lim_{n \to \infty} s_n(x) = f(x)
-  \]
-  for each $x \in X$. Applying dominated convergence theorem, since
-  $|s_n - f| \le f$, for $f \in L^p(\mu)$ gives \[
-    \|f - s_n\|^p_p = \int |f - s_n|^p \ d \mu \le \int |f|^p \ d \mu < \infty
-  \]
-  we get $\|f - s_n\|_p \to 0$
-\end{proof}
-
 

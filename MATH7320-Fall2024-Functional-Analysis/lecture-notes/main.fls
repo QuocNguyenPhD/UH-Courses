@@ -326,6 +326,9 @@ INPUT lectures/16.aux
 INPUT ./lectures/17.aux
 INPUT ./lectures/17.aux
 INPUT lectures/17.aux
+INPUT ./lectures/18.aux
+INPUT ./lectures/18.aux
+INPUT lectures/18.aux
 OUTPUT main.aux
 INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
 INPUT ./main.out
@@ -531,6 +534,11 @@ OUTPUT lectures/17.aux
 INPUT ./lectures/17.tex
 INPUT ./lectures/17.tex
 INPUT lectures/17.tex
+INPUT ./lectures/18.tex
+OUTPUT lectures/18.aux
+INPUT ./lectures/18.tex
+INPUT ./lectures/18.tex
+INPUT lectures/18.tex
 INPUT main.aux
 INPUT ./lectures/1.aux
 INPUT ./lectures/1.aux
@@ -583,11 +591,15 @@ INPUT lectures/16.aux
 INPUT ./lectures/17.aux
 INPUT ./lectures/17.aux
 INPUT lectures/17.aux
+INPUT ./lectures/18.aux
+INPUT ./lectures/18.aux
+INPUT lectures/18.aux
 INPUT ./main.out
 INPUT ./main.out
 INPUT main.run.xml
 OUTPUT main.run.xml
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
