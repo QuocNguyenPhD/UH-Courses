@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.26)  7 NOV 2024 17:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.11)  14 NOV 2024 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -970,7 +970,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 44.
 (./lectures/4.aux) (./lectures/5.aux) (./lectures/6.aux) (./lectures/7.aux)
 (./lectures/8.aux) (./lectures/9.aux) (./lectures/10.aux) (./lectures/11.aux)
 (./lectures/12.aux) (./lectures/13.aux) (./lectures/14.aux) (./lectures/15.aux)
-(./lectures/16.aux) (./lectures/17.aux) (./lectures/18.aux))
+(./lectures/16.aux) (./lectures/17.aux) (./lectures/18.aux) (./lectures/19.aux)
+(./lectures/20.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
@@ -1340,14 +1341,37 @@ Chapter 18.
 
 
 ]) [44]
+\openout2 = `lectures/19.aux'.
 
-LaTeX Warning: Empty bibliography on input line 129.
+ (./lectures/19.tex
+Package marginnote Info: Margin note 47.1 is on absolute page 47 on input line 
+4.
+Package marginnote Info: xpos seems to be 89.62709pt on input line 4.
+ [45
+
+
+
+]) [46]
+\openout2 = `lectures/20.aux'.
+
+ (./lectures/20.tex
+Package marginnote Info: Margin note 49.1 is on absolute page 49 on input line 
+4.
+Package marginnote Info: xpos seems to be 89.62709pt on input line 4.
+ [47
+
+
+
+]) [48]
+
+LaTeX Warning: Empty bibliography on input line 131.
 
 (./main.aux (./lectures/1.aux) (./lectures/2.aux) (./lectures/3.aux)
 (./lectures/4.aux) (./lectures/5.aux) (./lectures/6.aux) (./lectures/7.aux)
 (./lectures/8.aux) (./lectures/9.aux) (./lectures/10.aux) (./lectures/11.aux)
 (./lectures/12.aux) (./lectures/13.aux) (./lectures/14.aux) (./lectures/15.aux)
-(./lectures/16.aux) (./lectures/17.aux) (./lectures/18.aux))
+(./lectures/16.aux) (./lectures/17.aux) (./lectures/18.aux) (./lectures/19.aux)
+(./lectures/20.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1359,10 +1383,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31482 strings out of 476076
- 589838 string characters out of 5793775
+ 31552 strings out of 476076
+ 591360 string characters out of 5793774
  1942187 words of memory out of 5000000
- 52783 multiletter control sequences out of 15000+600000
+ 52822 multiletter control sequences out of 15000+600000
  580707 words of font info for 116 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  84i,12n,87p,950b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1384,10 +1408,10 @@ b></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf-d
 ist/fonts/type1/public/rsfs/rsfs5.pfb></usr/share/texmf-dist/fonts/type1/public
 /cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.
 pfb>
-Output written on main.pdf (46 pages, 364239 bytes).
+Output written on main.pdf (50 pages, 379172 bytes).
 PDF statistics:
- 620 PDF objects out of 1000 (max. 8388607)
- 524 compressed objects within 6 object streams
- 215 named destinations out of 1000 (max. 500000)
+ 657 PDF objects out of 1000 (max. 8388607)
+ 557 compressed objects within 6 object streams
+ 232 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

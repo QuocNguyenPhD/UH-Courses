@@ -37,4 +37,4 @@
 \contentsline {chapter}{\numberline {20}}{52}{chapter.20}%
 \contentsline {chapter}{\numberline {21}}{54}{chapter.21}%
 \contentsline {section}{\numberline {21.1}Approximations by simple or continuous functions}{54}{section.21.1}%
-\contentsline {chapter}{\numberline {22}}{56}{chapter.22}%
+\contentsline {chapter}{\numberline {22}Inner Product Spaces}{57}{chapter.22}%

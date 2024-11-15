@@ -341,6 +341,9 @@ INPUT lectures/22.aux
 INPUT ./lectures/23.aux
 INPUT ./lectures/23.aux
 INPUT lectures/23.aux
+INPUT ./lectures/24.aux
+INPUT ./lectures/24.aux
+INPUT lectures/24.aux
 OUTPUT main.aux
 INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
 INPUT ./main.out
@@ -588,6 +591,11 @@ OUTPUT lectures/23.aux
 INPUT ./lectures/23.tex
 INPUT ./lectures/23.tex
 INPUT lectures/23.tex
+INPUT ./lectures/24.tex
+OUTPUT lectures/24.aux
+INPUT ./lectures/24.tex
+INPUT ./lectures/24.tex
+INPUT lectures/24.tex
 INPUT main.aux
 INPUT ./lectures/1.aux
 INPUT ./lectures/1.aux
@@ -655,6 +663,9 @@ INPUT lectures/22.aux
 INPUT ./lectures/23.aux
 INPUT ./lectures/23.aux
 INPUT lectures/23.aux
+INPUT ./lectures/24.aux
+INPUT ./lectures/24.aux
+INPUT lectures/24.aux
 INPUT ./main.out
 INPUT ./main.out
 INPUT main.run.xml

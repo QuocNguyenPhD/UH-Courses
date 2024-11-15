@@ -1,0 +1,265 @@
+% initial settings
+\documentclass[12pt]{exam}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+\usepackage{url,hyperref}
+
+\usepackage{amsmath} % math symbols, matrices, cases, trig functions,
+% var-greek symbols.
+\usepackage{amsfonts} % mathbb, mathfrak, large sum and product symbols.
+\usepackage{amssymb} % extended list of math symbols from AMS.
+% https://ctan.math.washington.edu/tex-archive/fonts/amsfonts/doc/amssymb.pdf
+\usepackage{amsthm} % theorem styling.
+\usepackage{mathrsfs} % mathscr fonts.
+\usepackage{yhmath} % widehat.
+\usepackage{empheq} % emphasize equations, extending 'amsmath' and 'mathtools'.
+\usepackage{bm} % simplified bold math. Do \bm{math-equations-here}
+
+% geometry of paper
+\geometry{
+  a4paper, % 'a4paper', 'c5paper', 'letterpaper', 'legalpaper'
+  asymmetric, % don't swap margins in left and right pages. as
+  % opposed to 'twoside'
+  centering, % to center the content between margins
+  bindingoffset=0cm,
+}
+
+% hyprlink settings
+\hypersetup{
+  colorlinks = true,
+  linkcolor = {red!60!black},
+  anchorcolor = red,
+  citecolor = {green!50!black},
+  urlcolor = magenta,
+}
+
+% theorem styles
+\theoremstyle{plain} % default; italic text, extra space above and below
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\theoremstyle{definition} % upright text, extra space above and below
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{remark} % upright text, no extra space above or below
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{note}{Note} %'Notes' in italics and without counter
+
+% renewcommands for counters
+\newcommand{\propositionautorefname}{Proposition}
+\newcommand{\definitionautorefname}{Definition}
+\newcommand{\lemmaautorefname}{Lemma}
+\newcommand{\remarkautorefname}{Remark}
+\newcommand{\exampleautorefname}{Example}
+
+\addbibresource{articles.bib}
+
+\begin{document}
+
+\title{MATH7320 - Functional Analysis \\ Homework 5}
+
+% author list
+\author{
+  Joel Sleeba \\
+}
+
+\maketitle
+\printanswers
+\unframedsolutions
+
+\begin{questions}
+
+  \question
+  \textcolor{red}{not finished}
+  \begin{solution}
+
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+  \begin{solution}
+    Since $S \perp S^\perp$, clearly $S \subset (S^\perp)^\perp$.
+    Moreover, we know that $(S^\perp)^\perp =
+    \textrm{Ker}(P_{S^\perp})$. Therefore $(S^\perp)^\perp$ is a
+    closed subspace. Hence $\overline{\textrm{span}}(S) \subset
+    (S^\perp)^\perp$. Conversely if $x \in (S^\perp)^\perp$, then $x
+    \perp S^\perp$
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+  \begin{solution}
+    Let $T_n \in \mathcal{K}(\mathcal{X}, \mathcal{Y})$ be a Cauchy sequence.
+  \end{solution}
+
+  \question
+  \begin{solution}
+    Since we know that $I = P_{\mathcal{M}} + P_{\mathcal{M}^\perp}$,
+    we see that $X = \mathcal{M} \oplus \mathcal{M}^\perp$. Then for
+    all $x \in X$, $x = m + m^\prime$ for unique $m \in \mathcal{
+    M}, m^\prime \in \mathcal{M}^\perp$. Then $\pi(x) = m^\prime +
+    \mathcal{M}$ for $\pi: X \to X/\mathcal{M}$. Moreover
+    \begin{align*}
+      \|x\| = \|m\| + \|m^\prime\| \quad \textrm{ and } \quad
+      \|\pi(x)\| = \|m^\prime\|
+    \end{align*}
+    Thus we see that $\pi|_{\mathcal{M}^\perp}$ is isometric.
+  \end{solution}
+
+  \question
+  \begin{solution}
+
+  \end{solution}
+
+  \question
+  \begin{solution}
+
+  \end{solution}
+
+  \question
+  \begin{solution}
+    \begin{parts}
+      \part $(1 \implies 2)$ If $T$ is an isometry, then expanding
+      $\langle  Tx , Ty \rangle  = \langle x , y \rangle$ for some
+      $x, y \in \mathcal{H}$, we get
+      \begin{align*}
+        \langle Tx , Ty \rangle  + \langle Ty , Tx \rangle  = \langle
+        x , y \rangle  + \langle y , x \rangle
+      \end{align*}
+      which gives $\Re \langle x , y \rangle = \Re \langle Tx , Ty
+      \rangle$. Now replace $x$ with $ix$ to get $\Im \langle Tx , Ty
+      \rangle  = \Im \langle x , y \rangle $. Since real and
+      imaginary parts are equal, we see that $\langle Tx , Ty \rangle
+      = \langle x , y \rangle $
+      \part $(2 \implies 3)$ If $\langle Tx , Ty \rangle  = \langle x
+      , y \rangle $ for all $x, y \in \mathcal{H}$, then $\langle
+      T^*T x , y \rangle = \langle x , y \rangle $, which implies
+      $\langle (T^*T - I) x , y \rangle = 0$ for all $x , y \in
+      \mathcal{H}$. Then Reisz Representation theorem shows that if
+      $y \neq 0$, we must have $T^*T - I = 0$.
+      \part $(3 \implies 2)$ If $T^*T = I$, then
+      \begin{align*}
+        \|Tx\|^2 &= \langle Tx , Tx \rangle  \\
+        &= \langle T^*T x , x \rangle  \\
+        &= \langle x , x \rangle  \\
+        &= \|x\|^2
+      \end{align*}
+      which shows that $T$ is an isometry.
+    \end{parts}
+  \end{solution}
+
+  \question
+  \begin{solution}
+    \begin{parts}
+      \part $(1 \implies 3)$ If $T$ is normal isometry, we see that $
+      TT^* = T^*T$, and previous question proves that $TT^* = T^*T = I$.
+      \part ($3 \implies 2$) If $TT^* = T^*T = I$, then it is clear
+      from the previous question that $T$ is an isometry. To see that
+      it is a bijection, let $x \in H$, since $T(T^*(x)) = x$, we see
+      that $   x \in T(\mathcal{H})$. Hence $T$ is a bijection.
+      \part $(2 \implies 1)$. We just need to show normality of $T$.
+      Since $T$ is given to be an isometric bijection, $T$ has an
+      inverse, $P$. Since $T$ is bijective $P$ is also isometric and
+      linear. To see linearity, notice that
+      \begin{align*}
+        P(x + y) = P(T(Px) + T(Py)) = P(T(Px + Py)) = Px + Py
+      \end{align*}
+      We claim $P = T^*$. To see this, note that
+      \begin{align*}
+        \langle PTx , y \rangle = \langle  x , y \rangle = \langle
+        Tx , Ty \rangle = \langle T^*Tx , y \rangle
+      \end{align*}
+      Hence we see that $\langle  (PT - T^*T)x , y \rangle = 0 $ for
+      al $ x, y \in \mathcal{H}$. Therefore by Reisz representation,
+      we have $  PT - T^*T = (P-T^*)T = 0$. Since $T$ is bijective,
+      this forces $P = T^*$ and we get the normality.
+    \end{parts}
+  \end{solution}
+
+  \question
+  \begin{solution}
+    Let $x \in \textrm{Ker}(T)$. Then $0 = \langle Tx , y \rangle =
+    \langle x , T^*y \rangle$ for any $y \in \mathcal{H}$, shows that
+    $y \in T(\mathcal{H})^\perp$.
+
+    Conversely if $x \in T^*(H)^\perp$. Then $0 = \langle x , T^*y
+    \rangle = \langle Tx , y \rangle = $ for any $y \in \mathcal{H}$
+    shows that $x \in \textrm{Ker}(T)$ by Reisz representation theorem.
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+  \begin{solution}
+
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+
+  \begin{solution}
+
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+
+  \begin{solution}
+
+  \end{solution}
+
+  \question
+  \textcolor{red}{not finished}
+  \begin{solution}
+    \begin{parts}
+      \part If $M$ is invariant under $T$, then $T(M) \subset M$,
+      This shows $T(m) = P_MT(m)$ for all $m \in M$. Thus $TP_M =
+      P_MTP_M$. Conversely if $TP_M = P_MTP_M$, then $T(m) = TP_M(m)
+      = P_MTP_M(m) = P_MT(m)$ for all $m \in M$, shows that $T(m)
+      \subset M$ for all $m \in M$. Thus $M$ is invariant under $T$.
+
+      \part If $M$ reduces $T$, then $M$ and $M^\perp$ is invariant
+      under $T$. Thus we see that for $x = m + m^\prime$ for $m \in
+      M, m^\prime \in M^\perp$,
+      \begin{align*}
+        P_MT(x) = P_M(T(m) + T( m^\prime)) = P_M(T(m)) = T(m) = T(P_M(x))
+      \end{align*}
+      Thus $P_MT = TP_M$.
+
+      Conversely, if $P_MT = TP_M$, then for $m \in M$, we get
+      \begin{align*}
+        P_MT(m) = TP_M(m) = T(m)
+      \end{align*}
+      which shows $T(m) \in M$ and for $m^\prime \in M^\perp$, we get
+      \begin{align*}
+        P_MT(m^\prime) = TP_M(m^\prime) = T(0) = 0
+      \end{align*}
+      Hence $T(m^\prime) \perp M$ which implies $T(m^\prime) \in M^\perp$.
+      Thus we see that $M$ reduces $T$.
+
+      \part If $M$ reduces $T$, then it is clear that $M$ is
+      invariant under $T$.
+      Moreover from before, we see that $TP_M =
+      P_MT$, then
+      \begin{align*}
+        \langle P_MT(x) ,  y \rangle = \langle TP_M(x) ,  y \rangle
+        = \langle P_M(x) ,  T^*(y) \rangle
+      \end{align*}
+
+      \part
+
+      \part
+    \end{parts}
+
+  \end{solution}
+
+\end{questions}
+\printbibliography[heading=bibintoc]
+\end{document}
+
+

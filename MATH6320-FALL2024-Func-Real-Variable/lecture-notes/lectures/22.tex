@@ -95,4 +95,23 @@
   \end{align*}
 \end{proof}
 
+\marginnote{ \scriptsize 12-11-2024}
+\begin{proposition}
+  Show that if $\mu(X) < \infty$, with $p \le r \le \infty$, then
+  \begin{align*}
+    L^r(\mu) \subset L^p(\mu)
+  \end{align*}
+  Given $f \in L^r(\mu)$.
+\end{proposition}
+\begin{proof}
+  Let $f \in L^r(\mu)$. Then,
+  \begin{align*}
+    \|f\|_p^p &= \int |f|^p \ d m \\
+    &\le \Bigg(\int |f|^{r} \ d m \Bigg) ^{p/r} \Bigg(\int 1 \ d
+    m\Bigg)^{1 - p/r} \\
+    &\le \|f\|_r^p \mu(X)^{1- \frac{p}{r}} \\
+    &< \infty
+  \end{align*}
+\end{proof}
+
 

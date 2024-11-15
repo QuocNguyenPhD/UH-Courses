@@ -1,0 +1,171 @@
+% initial settings
+\documentclass[12pt]{exam}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+\usepackage{url,hyperref}
+
+\usepackage{amsmath} % math symbols, matrices, cases, trig functions,
+% var-greek symbols.
+\usepackage{amsfonts} % mathbb, mathfrak, large sum and product symbols.
+\usepackage{amssymb} % extended list of math symbols from AMS.
+% https://ctan.math.washington.edu/tex-archive/fonts/amsfonts/doc/amssymb.pdf
+\usepackage{amsthm} % theorem styling.
+\usepackage{mathrsfs} % mathscr fonts.
+\usepackage{yhmath} % widehat.
+\usepackage{empheq} % emphasize equations, extending 'amsmath' and 'mathtools'.
+\usepackage{bm} % simplified bold math. Do \bm{math-equations-here}
+
+% geometry of paper
+\geometry{
+  a4paper, % 'a4paper', 'c5paper', 'letterpaper', 'legalpaper'
+  asymmetric, % don't swap margins in left and right pages. as
+  % opposed to 'twoside'
+  centering, % to center the content between margins
+  bindingoffset=0cm,
+}
+
+% hyprlink settings
+\hypersetup{
+  colorlinks = true,
+  linkcolor = {red!60!black},
+  anchorcolor = red,
+  citecolor = {green!50!black},
+  urlcolor = magenta,
+}
+
+% theorem styles
+\theoremstyle{plain} % default; italic text, extra space above and below
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\theoremstyle{definition} % upright text, extra space above and below
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{remark} % upright text, no extra space above or below
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{note}{Note} %'Notes' in italics and without counter
+
+% renewcommands for counters
+\newcommand{\propositionautorefname}{Proposition}
+\newcommand{\definitionautorefname}{Definition}
+\newcommand{\lemmaautorefname}{Lemma}
+\newcommand{\remarkautorefname}{Remark}
+\newcommand{\exampleautorefname}{Example}
+
+\addbibresource{articles.bib}
+
+\begin{document}
+
+\title{MATH6320 - Theory of Functions of a Real Variable \\ Assignment 9 }
+
+% author list
+\author{
+  Joel Sleeba \\
+}
+
+\maketitle
+\printanswers
+\unframedsolutions
+
+\begin{questions}
+  \question
+  \begin{solution}
+    \begin{parts}
+      \part Let $r < p < s$, where $ r, s \in E$. Then by the
+      convexity of $[r, s] \subset \mathbb{R}$, there is a $ t \in
+      [0, 1]$ such that $p = tr + (1-t)s$. Then Holder's
+      inequality on $\frac{1}{t}$ and $\frac{1}{(1-t)}$ gives,
+      \begin{align*}
+        \int |f|^p \ d  \mu &= \int |f|^{tr}|f|^{(1-t)s} \ d \mu \\
+        &\le \Bigg( \int |f|^{\frac{tr}{t}} \ d m \Bigg)^{t} \Bigg( \int
+        |f|^{\frac{(1-t)s}{(1-t)}} \ d m\Bigg)^{1-t} \\
+        &= \Bigg( \int |f|^{r} \ d m \Bigg)^{t} \Bigg( \int
+        |f|^{s} \ d m\Bigg)^{1-t} \\
+        &= \| f\|_r^{rt} \| f\|_s^{s(1-t)}
+      \end{align*}
+      Thus we get $\|f\|_p \le \|f\|_r^{\frac{rt}{p}}
+      \|f\|_s^{\frac{s(1-t)}{p}}$
+
+      For the sake of contradiction, assume that $\|f\|_p >
+      \max\{\|f\|_r, \|f\|_s\}$. Then by the monotonicity of the
+      function $x \to x^k$, where $k >0$, we get
+      \begin{align*}
+        \|f\|_p^{\frac{rt}{p}} > \|f\|_r^{\frac{rt}{p}} \quad
+        \textrm{ and } \quad
+        \|f\|_p^{\frac{s(1-t)}{p}} > \|f\|_s^{\frac{s(1-t)}{p}}
+      \end{align*}
+      Then we'll get
+      \begin{align*}
+        \|f\|_p = \|f\|_p^{\frac{rt}{p}} \|f\|_p^{\frac{s(1-t)}{p}} >
+        \|f\|_r^{\frac{rt}{p}} \|f\|_s^{\frac{s(1-t)}{p}}
+      \end{align*}
+      contradicting our previous result. Hence we see that $\|f\|_p
+      \le \max\{\|f\|_r, \|f\|_s\}$
+
+      \part Let $0 < \epsilon$. Consider the set $A_\epsilon = \{ x
+      \in X  \ : \  \|f\|_\infty < |f(x)| + \epsilon \}$. Then
+      \begin{align*}
+        \int_X |f|^p \ d \mu &\ge \int_{A_\epsilon} |f|^p \ d \mu \\
+        &\ge \int_{A_\epsilon} (\|f\|_\infty - \epsilon)^p \ d \mu \\
+        &= ( \|f\|_\infty - \epsilon)^p \mu(A_\epsilon)
+      \end{align*}
+      Since we are given that $\|f\|_\infty \in (0, \infty]$, there
+      is an $\varepsilon > 0$ such that $ \|f\|_\infty > \varepsilon$.
+      Moreover since $\|f\|_r < \infty$, the above inequality forces
+      $\mu(A_\varepsilon) < \infty$. Then taking power $\frac{1}{p}$
+      to the above inequality, we get
+      \begin{align*}
+        \|f\|_p \ge (\|f\|_\infty - \epsilon) \mu(A_\varepsilon)^{\frac{1}{p}}
+      \end{align*}
+      Now taking limits, we get
+      \begin{align*}
+        \lim_{p \to \infty} \inf \|f\|_p \ge (\|f\|_\infty - \varepsilon)
+      \end{align*}
+      since $ \mu(A_\varepsilon)^{\frac{1}{p}} \to 1$ as $ p \to \infty$.
+      Again since $ \varepsilon >0 $ was arbitrary, we get
+      \begin{align*}
+        \lim_{p \to \infty} \inf \|f\|_p \ge \|f\|_\infty
+      \end{align*}
+
+      Now to get the other inequality, observe that
+      \begin{align*}
+        \int |f|^p \ d \mu &= \int |f|^r \ d \mu \int |f|^{p-r} \ d \mu \\
+        &\le \| f\|_\infty^{p-r} \int |f|^r \ d \mu \\
+      \end{align*}
+      Hence we get
+      \begin{align*}
+        \|f\|_p = \Big( \int |f|^p \ d \mu\Big)^{1/p} \le \|
+        f\|_\infty^{\frac{p-r}{p}} \Big( \int |f|^r \ d
+        \mu\Big)^{\frac{1}{p}} = \|f\|_\infty \|f\|_r^{\frac{r}{p}}
+      \end{align*}
+      Thus taking limits, we see that
+      \begin{align*}
+        \lim_{p \to \infty} \sup \|f\|_p \le \|f\|_\infty
+      \end{align*}
+      as $\|f\|_r^{\frac{r}{p}} \to 0$ as $  p \to \infty$ since $
+      \|f\|_r < \infty$
+
+      Combining both the inequalities, we see
+      \begin{align*}
+        \lim_{p \to \infty} \sup \|f\|_p \le \|f\|_\infty \le \lim_{p
+        \to \infty} \inf \|f\|_p
+      \end{align*}
+      Thus
+      \begin{align*}
+        \lim_{p \to \infty} \|f\|_p = \|f\|_\infty
+      \end{align*}
+    \end{parts}
+
+  \end{solution}
+
+\end{questions}
+\printbibliography[heading=bibintoc]
+\end{document}
+
+
