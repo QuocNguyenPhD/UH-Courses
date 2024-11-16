@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.26)  11 NOV 2024 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.11)  15 NOV 2024 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -908,13 +908,9 @@ Overfull \hbox (2.4461pt too wide) in paragraph at lines 255--259
 a \OT1/cmr/m/n/12 = [] =
  []
 
-[3] [4] [5] [6]
-Underfull \vbox (badness 1270) detected at line 445
- []
+[3] [4] [5] [6] [7]
 
-[7]
-
-LaTeX Warning: Empty bibliography on input line 450.
+LaTeX Warning: Empty bibliography on input line 465.
 
 [8]
 This exam contains 14 questions with 0 parts, 0 subparts, and 0 subsubparts.
@@ -931,7 +927,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  20261 strings out of 476076
- 342473 string characters out of 5793775
+ 342473 string characters out of 5793774
  1945187 words of memory out of 5000000
  42094 multiletter control sequences out of 15000+600000
  574911 words of font info for 97 fonts, out of 8000000 for 9000
@@ -947,7 +943,7 @@ share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
 ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
 
-Output written on main.pdf (8 pages, 140393 bytes).
+Output written on main.pdf (8 pages, 141427 bytes).
 PDF statistics:
  141 PDF objects out of 1000 (max. 8388607)
  107 compressed objects within 2 object streams

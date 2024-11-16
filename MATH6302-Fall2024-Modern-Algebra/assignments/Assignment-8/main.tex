@@ -354,7 +354,9 @@
       \neq (2) = I \cap J$.
 
       \part Let $R$ be unital, and commutative with $I + J = R$, and let
-      $r \in I \cap J$.
+      $r \in I \cap J$. Since $I + J = R$ and $1 \in R$, we see that
+      $1 = i + j$ for some $ i \in I, j \in J$. Thus $r = r1 = ri +
+      rj \in IJ$. Thus $ I \cap J \subset IJ$.
     \end{parts}
   \end{solution}
 
@@ -368,21 +370,34 @@
 
   \question
   \begin{solution}
-    Let $I \cap J \subset P$ and $I \not \subset P$. Then $\exists
+    Let $IJ \subset P$ and $I \not \subset P$. Then $\exists
     i_p \in I\setminus P$. Now for any $j \in J$,
     \begin{align*}
-      i_pj \in IJ \subset I \cap J \subset P
+      i_pj \in IJ \subset P
     \end{align*}
     forces $j \in P$, by the primality of $P$. Hence $J \subset P$.
   \end{solution}
 
   \question
   \begin{solution}
-    Consider $x^2 + 4 \in I$. Since $x^2 + 4$ cannot be factorized in
-    $\mathbb{Z}[x]$, it cannot be written as $ab$ for any $a, b \in
-    I$. Moreover $x^2 = x\cdot x, 4 = 2\cdot2 \in I^2$. Hence we see
-    that $x^2 + 4 \in I^2$.
+    Let $x \in I, y \in J$. Then $x = \sum_{i = 1}^{n} r_i a_i, y =
+    \sum_{j = 1}^{m} s_i b_i$ for $r_i, s_j \in R$. This shows that
+    \begin{align*}
+      xy = \sum_{i = 1}^{n} \sum_{j = 1}^{m} (r_i a_i) (s_i b_j) =
+      \sum_{i = 1}^{n} \sum_{j = 1}^{m} (r_i a_i s_i)b_j = \sum_{i =
+      1}^{n}  \sum_{j = 1}^{m} k_i a_ib_j
+    \end{align*}
+    for $k_i \in R$, since $ I$ is an ideal of $R$. Since we have
+    shown that for any $x \in I, y \in J$, $xy$ is a $R$-combination
+    of elements $a_ib_j$, we see that any element of $IJ$ must also
+    be such. Thus we are done.
   \end{solution}
+  % \begin{solution}
+  %   Consider $x^2 + 4 \in I$. Since $x^2 + 4$ cannot be factorized in
+  %   $\mathbb{Z}[x]$, it cannot be written as $ab$ for any $a, b \in
+  %   I$. Moreover $x^2 = x\cdot x, 4 = 2\cdot2 \in I^2$. Hence we see
+  %   that $x^2 + 4 \in I^2$.
+  % \end{solution}
 
   \question
   \begin{solution}

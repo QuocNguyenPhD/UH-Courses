@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1731376739.4685 0
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1731717498.21017 0
   "articles.bib" 0 -1 0 ""
   "main.bcf" 0 -1 0 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1731376738.85454 "main.tex" "main.pdf" "main" 1731376739.46883 0
+["pdflatex"] 1731717497.25797 "main.tex" "main.pdf" "main" 1731717498.21056 0
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1727349926 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1727349926 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1727349926 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -138,13 +138,13 @@
   "/usr/share/texmf-dist/tex/latex/yhmath/OMXyhex.fd" 1727349926 415 6f009616205848d6bf5a6cf4ba5366c1 ""
   "/usr/share/texmf-dist/tex/latex/yhmath/yhmath.sty" 1727349926 4859 0d87ecb9c52cb398cf8866a2c0fb9d8d ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1727364934.83216 326993 92f68cc10ab4ce9240e9fbb800f4c9bd ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1727364923 7112995 db1202207059657c2070e6e69bb1e05d ""
-  "main.aux" 1731376739.39773 3174 c97a1f91e13cebadaeb340096abddb07 "pdflatex"
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1731387758.65684 326993 92f68cc10ab4ce9240e9fbb800f4c9bd ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731387750 7113019 a31d280819109898ee010565d9f73de2 ""
+  "main.aux" 1731717498.13127 3174 d5f591aea841d6259fc5575a3b7248e0 "pdflatex"
   "main.bbl" 0 -1 0 "biber main"
-  "main.out" 1731376739.35106 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1731376739.39773 2309 17ee7f4cf776a640b618a2b2d5deaa10 "pdflatex"
-  "main.tex" 1731376738.19773 16925 80ba71f413d995151f601050e5fb9381 ""
+  "main.out" 1731717498.08127 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1731717498.1346 2309 17ee7f4cf776a640b618a2b2d5deaa10 "pdflatex"
+  "main.tex" 1731717496.5646 17694 11c69334d916e5fb8406f084b6b0b0b2 ""
   (generated)
   "main.aux"
   "main.bcf"
