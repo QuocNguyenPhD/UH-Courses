@@ -161,9 +161,121 @@
         \lim_{p \to \infty} \|f\|_p = \|f\|_\infty
       \end{align*}
     \end{parts}
-
   \end{solution}
 
+  \question
+  \begin{solution}
+    Since $f_n \to f$ in $L^p(\mu)$, there is a subsequence $f_{n_k}$
+    such that $f_{n_k} \to f$ pointwise everywhere. Let $A \subset X$
+    such that $\mu(A) = 0$ and $f_{n_k}(x) \to f(x)$ for all $x \in A^c$.
+    Let $B$ be the set such that $\mu(B) = 0$ and $f_n(x) \to g(x)$
+    for all $x \in B^c$. Therefore $f_{n_k}(x) \to g(x)$ for all $x
+    \in B^c$, being a subsequence of $f_n$. Then for all $x \in
+    (A\cup B)^c$, we have $g(x) = f(x)$ by the uniqueness of the
+    pointwise limit in $\mathbb{C}$. Moreover $\mu(A \cup B) \le
+    \mu(A) + \mu(B) = 0$. Hence $f = g$ almost everywhere.
+  \end{solution}
+
+  \question
+  \begin{solution}
+    Let's define a new measure $\nu:= |f|^p \mu$ defined as
+    \begin{align*}
+      \nu(A) = \int_A |f|^p \ d \mu
+    \end{align*}
+    for all $A \in \mathcal{M}$. Then since $\|f\|_p < \infty$, we
+    get $\nu(X) < \infty$. Thus by Egorov's theorem, for all
+    $\epsilon>0$ there exist a
+    set $A^\prime \in \mathcal{M}$ such that $\nu(A^\prime)<
+    \frac{\epsilon}{2}$ and $f_n$ converges to $f$ uniformly on $A^{\prime c}$.
+
+    Now, for $r > 0$, let $ A_r = \{ x \in X  \ : \  |f(x)|^p < r
+    \}$. Since $f \in L^p(\mu)$, and $|f|^p \chi_{A_r^c} \ge r
+    \chi_{A_r^c}$, we get
+    \begin{align*}
+      \infty > \int_{A_r^c} |f|^p \ d \mu \ge \int r \chi_{A^c_r} \ d
+      \mu = r \mu(A_r^c)
+    \end{align*}
+    Thus we see that $\mu(A_r^c) < \infty$ for all $r > 0$. Again $ f
+    \in L^p(\mu)$ forces $f$ to be finite almost everywhere. Thus
+    $|f|^p \chi_{A_r} \to 0$ almost everywhere. Moreover $| f|^p
+    \chi_{A_r}$ is dominated by $|f|^p \in L^1(\mu)$. Hence by the
+    Lebesgue dominated convergence theorem, we see that
+    \begin{align*}
+      \lim_{r \to \infty} \int |f|^p \chi_{A_r} \ d \mu = 0
+    \end{align*}
+    Hence there is a $r_\epsilon >0$ such that $\int_{A_{r_\epsilon}}
+    |f|^p \ d \mu < \frac{\epsilon}{2}$.
+
+    Let $A = A^\prime \cup A_{r_\epsilon}$. Then since $\nu(A') < \epsilon/2$
+    \begin{align*}
+      \int_A |f|^p \ d \mu \le \int_{A^\prime} |f|^p \ d \mu +
+      \int_{A_{r_\epsilon}} |  f|^p \ d \mu < \frac{\epsilon}{2} +
+      \frac{\epsilon}{2} = \epsilon
+    \end{align*}
+    Then for $B = A^c$, since $B \subset A^{\prime  c}$, we get $f_n
+    \to f$ uniformly on $B$. Moreover since $B \subset
+    A_{r_\epsilon}^c$, we get $\mu(B) \le \mu(A_{r_\epsilon}) < \infty$.
+
+    Now let's evaluate $\|f_n  - f\|_p$. Since $A \cup B = X$, we see that
+    \begin{align}
+      \label{eq:1}
+      \|f_n - f\|_p^p = \int |f_n - f|^p \ d \mu = \int_A |f_n - f|^p
+      \ d \mu + \int_B|f_n - f|^p \ d \mu
+    \end{align}
+    Since $f_n \to f$ uniformly on $B$, there is an $N_\epsilon \in
+    \mathbb{N}$ such that for all $n \ge N_\epsilon$, $|f_n(x) - f(x)|
+    < \sqrt[p]{\frac{\epsilon}{\mu(B)}}$.
+
+    Then for $n \ge N_\epsilon$, we get
+    \begin{align*}
+      \int_B |f_n - f|^p \ d \mu \le \int_B \frac{\epsilon}{\mu(B)}
+      \ d \mu = \epsilon
+    \end{align*}
+  \end{solution}
+  % To evaluate the other integral, notice that by Minkowski's inequality
+  % \begin{align*}
+  %   \Big( \int_A |f_n - f|^p \ d \mu
+  %   \Big)^{1/p} \le \Big(\int_A |f_n|^p \ d \mu \Big)^{1/p} + \Big( \int_A
+  %   |f| \ d \mu \Big)^{1/p}
+  % \end{align*}
+  Since $X = A \cup B$, we note that
+  \begin{align*}
+    \int_A |f_n|^p \ d \mu = \|f_n\|_p^p - \int_B |f_n|^p \ d \mu
+  \end{align*}
+  Then by Fatou's lemma, and the fact that $\|f_n\| \to \|f\|$ we get
+  \begin{align*}
+    \lim_n \sup \int_A |f_n|^p \ d \mu &= \lim_n \sup \|f_n\|_p^p -
+    \lim_n \inf \int_B |f_n|^p \ d \mu \\
+    &\le \|f\|_p^p - \int_B \lim_n \inf |f_n|^p \ d \mu \\
+    &= \int_X |f|^p \ d \mu - \int_B |f|^p \ d \mu \\
+    &= \int_{X \setminus B} |f|^p\ d \mu \\
+    &= \int_A |f|^p \ d \mu
+  \end{align*}
+  where $\lim \inf |f_n|^p = |f|^p$ in $B$ since $f_n \to f$ uniformly  on $B$.
+  Since we know that $\int_A |f|^p \ d \mu < \epsilon$, we see that
+  there is an $M_\epsilon \in \mathbb{N}$ such that for all $n > M_\epsilon$,
+  \begin{align*}
+    \int_A |f_n|^p \ d \mu \le \sup_{m \ge n} \int_A |f_n|^p \ d \mu
+    \le \int_A |f|^p \ d \mu \le \epsilon
+  \end{align*}
+
+  Then for all $n > M_\epsilon$, Minkowski inequality gives
+  \begin{align*}
+    \int_A |f_n - f| \ d \mu &\le \Bigg[\Big(\int_A |f_n|^p \ d \mu
+    \Big)^{1/p} + \Big(\int_A |f|^p \ d \mu \Big)^{1/p} \Bigg]^p \\
+    &\le (\epsilon^{1/p} + \epsilon^{1/p})^p = 2^p \epsilon
+  \end{align*}
+  We note that $2^p \epsilon \to 0$ as $\epsilon \to 0$.
+
+  Hence we see from \autoref{eq:1} that for $n > \max\{N_\epsilon,
+  M_\epsilon\}$,
+  \begin{align*}
+    \|f_n - f\|^p_p < (2^p + 1)\epsilon
+  \end{align*}
+  Since $\epsilon>0$ was arbitrary, and $(2^p + 1)\epsilon \to 0$ as
+  $ \epsilon \to 0$, we see that $\|f_n - f\|_p^p \to 0$. Now by the
+  continuity of the function
+  $x \to x^{1/p}$, we see that $\|f_n - f\| \to 0$.
 \end{questions}
 \printbibliography[heading=bibintoc]
 \end{document}
