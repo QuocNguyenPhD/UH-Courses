@@ -73,24 +73,3 @@
   \end{align*}
 \end{exercise}
 
-\section{Reisz Representation Theorem}
-
-\begin{theorem}[Reisz Representation Theorem]
-  Let $\Lambda: \mathcal{H} \to \mathbb{C}$ be a continuous linear
-  functional on a Hilbert space. Then there is a unique $y \in
-  \mathcal{H}$ such that $\Lambda(x) = \langle x , y \rangle $
-\end{theorem}
-\begin{proof}
-  Assume that $\Lambda \neq 0$. Then $M = \textrm{Ker}(\Lambda)$ is a proper
-  closed linear subspace of $\mathcal{H}$. Then so is $M^\perp$. Let
-  $0 \neq v, w \in M^\perp$. Then $\Lambda(v) \neq 0 \neq
-  \Lambda(w)$. Then since
-  \begin{align*}
-    \Lambda \Big( \frac{v}{\Lambda(v)} - \frac{w}{\Lambda(w)} \Big) = 0
-  \end{align*}
-  forces $\frac{v}{\Lambda(v)} - \frac{w}{\Lambda(w)} \in M \cap
-  M^\perp = \{ 0 \}$. Hence $v \in \textrm{span}(w)$. Thus we see
-  that $M$ has co-dimension 1. i.e $M^\perp$ has dimension $1$.
-\end{proof}
-
-

@@ -1,7 +1,5 @@
 % TeX_root = ../main.tex
 
-\chapter{}
-
 \begin{theorem}
   Let $H$ be a Hilbert space and let $C$ be a non-empty closed convex
   subset of $H$. Then there exist a unique vector $x \in C$ such that
@@ -15,7 +13,10 @@
     \|\eta_n - \eta_m\|^2 = 2(\|\eta_n\|^2 + \|\eta_m\|^2) - 4 \|
     \frac{1}{2}(\eta_n + \eta_m) \|^2 \le 4(d^2  + \epsilon) - 4d^2 = 4 \epsilon
   \]
-  Hence the sequence $\eta_n$ is Cauchy and hence convergent since
+  (Note that since $C$ is compact, $\frac{1}{2}\eta_n +
+    \frac{1}{2}\eta_m \in C$ and therefore, by the definition of $d$,
+  we get $\|\frac{1}{2}(\eta_n + \eta_m)\| \ge d$.) Hence the sequence
+  $\eta_n$ is Cauchy and hence convergent since
   the space is complete. Let $\eta = \lim_{n \to \infty} \eta_n$.
   Since $C$ is closed $\eta \in C$ and clearly $\|\eta\| = d$.
 
@@ -47,6 +48,9 @@
   Let $\eta \in H$. Then $\xi \in K$ satisfy $\|\xi - \eta\| = d(\eta, K)$ iff
   $\xi - \eta \perp K$.
 \end{lemma}
+\begin{proof}
+  Let $\xi - \eta \perp K$ and $k \in K$. Then $\xi + k \in $
+\end{proof}
 
 \begin{theorem}[Reisz Representation Theorem]
   Let $H$ be a Hilbert space and $f \in H^*$. Then there exists a
@@ -57,6 +61,8 @@
 \begin{proof}
   \textcolor{red}{verify}
 \end{proof}
+
+\section{Orthogonal Projections}
 
 \begin{theorem}
   Let $H_1, H_2$ be Hilbert spaces, and $T: H_1 \to H_2$ be a bounded
