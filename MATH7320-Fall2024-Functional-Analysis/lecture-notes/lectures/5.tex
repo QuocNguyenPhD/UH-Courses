@@ -1,66 +1,54 @@
 % TeX_root = ../main.tex
 
-\chapter{}
-
-\begin{theorem}
-  There exists $\phi \in (\ell^\infty)^{*}$ satisfying the following \begin{enumerate}[label=\arabic*]
-    \item $\forall (a_n) \in \ell^\infty$ with $a_n \ge 0$ for all $ n \in \mathbb{N}$, $\phi((a_n)) \ge 0$
-    \item If $(a_n)$ is convergent, then $\phi((a_n)) = \lim_{n \to \infty}  a_n$
-    \item If $(a_n) \in \ell^\infty$ and $b_n = a_{n+1}$, then $\phi((b_n)) = \phi((a_n))$
-  \end{enumerate}
-  Moreover such $\phi$ is called a Banach limit.
-\end{theorem}
-\begin{proof}
-  Let $S: \ell^\infty(\mathbb{R} \to \ell^\infty(\mathbb{R})$ and $T = I - S$ where $I$ is the identity map. Also let $V = \textrm{Range}(T) + c$ where $ c \in \textbf{c}$, the set of convergent sequences.
-
-  Define $\phi: V \to \mathbb{R}$, $\phi(a_n - a_{n+1} + x_n) = \lim_{n \to \infty}  x_n$.
-  \begin{itemize}[]
-    \item Claim 1: $\phi$ is well defined
-    \item Claim 2: $\|\phi\| = 1$
-  \end{itemize}
-
-  Assuming the claims, by Hahn Banach, $\phi$ extends to $\tilde{ \phi} \in \ell^\infty(\mathbb{R})$ with $\|\tilde{\phi}\|= 1$. Then by the last lemma we get $ \tilde{\phi}((y_n)) \ge 0$ for all $(y_n) \in ell^\infty(\mathbb{R})$ with $y_n \ge 0$
-\end{proof}
- \begin{proof}[Proof of Claim 1]
-   Suppose that $(a_n) \in \ell^\infty$ is a sequence such that $a_{n} - a_{n+1}$ converges, say $a_n \to a_{n+1} \to \alpha$. If $ \alpha > 0$, then $\exists N \in \mathbb{N}$ such that for all $n > N$, $ a_n - a_{n+1} > \frac{\alpha}{2}$. So $a_N > \frac{\alpha}{2} + a_{N+1} > \ldots > k\frac{\alpha}{2} + a_{N+k}$. So for all $k \in \mathbb{N}$, $a_N - a_{N+k} = k \frac{\alpha}{2} \to \infty$ contradicting our assumption that $a_n - a_{n+1}$ converges. 
-
-   Now assume that $(a_n), ( b_n) \in \ell^\infty(\mathbb{R})$ with $(x_n), (y_n) \in \textbf{c}$ such that $a_n - a_{n+1} + x_n = b_n - b_{n+1} + y_n$. Then $(a_n - b_n) - (a_{ n+1} - b_{n+1}) = y_n -x_n$. Then since  RHS is a convergent limit, LHS must be convergent, which we get from above that it must converge to zero. Then $\lim_{n \to \infty} x_n = \lim_{n \to \infty} y_n$
- \end{proof}
-\begin{proof}[Proof Claim 2]
-   \textcolor{red}{verify}
-\end{proof}
-To complete the proof, define $ \Psi: \ell^\infty \to \mathbb{C}$ by $\Psi((a_n + ib_n)) = \tilde{\phi}(a_n) + i \tilde{ \phi}(b_n)$ \textcolor{red}{verify}
-
 \section{Quotient Spaces}
 \begin{definition}
-  Let $X$ be a normed space and $Y \leqslant X$ be a closed subspace. For every $x \in X$, define \[
-       \|x + Y\| = \inf \{ \|x+y\| \ : \ y \in Y \}
+  Let $X$ be a normed space and $Y \leqslant X$ be a closed
+  subspace. For every $x \in X$, define \[
+    \|x + Y\| = \inf \{ \|x+y\| \ : \ y \in Y \}
   \]
 \end{definition}
 \begin{lemma}
-  This defines as norm on  $\frac{X}{Y}$. If $X$ is complete, then $ \frac{X}{Y}$ is complete.
+  This defines as norm on  $\frac{X}{Y}$. If $X$ is complete, then
+  $ \frac{X}{Y}$ is complete.
 \end{lemma}
 \begin{proof}
-  Obviously, $\|x+Y\| \ge 0 $ for all $ x \in X$, and $\|x+z + Y\| \le \|x+Y\| + \|y + Y\|$. Similarly, we can also show homogeneity.
+  Obviously, $\|x+Y\| \ge 0 $ for all $ x \in X$, and $\|x+z + Y\|
+  \le \|x+Y\| + \|y + Y\|$. Similarly, we can also show homogeneity.
 
-  Now assume $x \in X$ is such that $\|x+Y\| = 0$. Then there is a sequence $(y_n) \in Y$ such that $ \|x - y_n\| \to 0$, that is $y_n \to x$. Since $Y$ is closed, we get $x \in Y$.
+  Now assume $x \in X$ is such that $\|x+Y\| = 0$. Then there is a
+  sequence $(y_n) \in Y$ such that $ \|x - y_n\| \to 0$, that is
+  $y_n \to x$. Since $Y$ is closed, we get $x \in Y$.
 
-  To show the second part of the lemma, consider the sequence $(x_n + Y) \in X/Y$ such that $\sum_{n \in \mathbb{N}} \|x_n - Y\| < \infty$. For each $ n \in \mathbb{N}$, choose $y_n \in Y$ such that \[
+  To show the second part of the lemma, consider the sequence $(x_n
+  + Y) \in X/Y$ such that $\sum_{n \in \mathbb{N}} \|x_n - Y\| <
+  \infty$. For each $ n \in \mathbb{N}$, choose $y_n \in Y$ such that \[
     \|x_n + y_n\| \le \|x_n + Y\| + \frac{1}{2^n}
   \]
-  Then $\sum_{n \in \mathbb{N}} \|x_n + y_n\| \le \infty$. Since $X$ is complete, the sequence $ \sum_{n \in \mathbb{N}} x_n + y_n$ converges to say $z \in X$. Then \begin{align*}
-    \|(z+Y) - \sum_{n = k}^{n} (x_n +Y)\| &= \|\Big( z - \sum_{n = k}^{n} x_n \Big) + Y\| \\ 
-    & = \|\Big( z - \sum_{i = 1}^{k}(x_n + y_n) \Big) + Y\| \\ 
+  Then $\sum_{n \in \mathbb{N}} \|x_n + y_n\| \le \infty$. Since
+  $X$ is complete, the sequence $ \sum_{n \in \mathbb{N}} x_n +
+  y_n$ converges to say $z \in X$. Then
+  \begin{align*}
+    \|(z+Y) - \sum_{n = k}^{n} (x_n +Y)\| &= \|\Big( z - \sum_{n =
+    k}^{n} x_n \Big) + Y\| \\
+    & = \|\Big( z - \sum_{i = 1}^{k}(x_n + y_n) \Big) + Y\| \\
     & \le \|\Big( z - \sum_{i = 1}^{k}(x_n + y_n) \Big) \|
   \end{align*}
   which converges to 0 as $k \to \infty$
 \end{proof}
 
 \begin{lemma}
-  The canocial map, $q: X \to \frac{X}{Y}$ is a continuous open map. A subset $E \subset X/Y$ is open iff $ q^{-1}(E) \subset X$ is open.
+  The canocial map, $q: X \to \frac{X}{Y}$ is a continuous open
+  map. A subset $E \subset X/Y$ is open iff $ q^{-1}(E) \subset X$ is open.
 \end{lemma}
 \begin{proof}
-  Since $\|x + Y\| \le \|x\|$,  for all $x \in X$, we see that the map $q$ is a contraction. Thus  for all open $E \subset X/Y$, we get $ q^{-1}(E)$ is open.
+  Since $\|x + Y\| \le \|x\|$,  for all $x \in X$, we see that the
+  map $q$ is a contraction. Thus  for all open $E \subset X/Y$, we
+  get $ q^{-1}(E)$ is open.
 
-  Conersely, assume that $  A \subset X$ is open. Let $ x \in A$ and $ r > 0$ such that $B_r(a) \subset A$. Let $  z \in X$ such that $\|q(a) - q(z)\| < r$. So, $\|(a-z) + Y\| < r$. Then $\exists y \in Y$ such that $ \|a-z-y\| < r$. So $z+y \in B_r(a), q( z+y) = q( z) \in q( B_r(a))$. So $B_r(q(a)) \subset q(  B_r(a)) \subset q(A)$. Thus $q(A)$ is open.
+  Conersely, assume that $  A \subset X$ is open. Let $ x \in A$
+  and $ r > 0$ such that $B_r(a) \subset A$. Let $  z \in X$ such
+  that $\|q(a) - q(z)\| < r$. So, $\|(a-z) + Y\| < r$. Then
+  $\exists y \in Y$ such that $ \|a-z-y\| < r$. So $z+y \in B_r(a),
+  q( z+y) = q( z) \in q( B_r(a))$. So $B_r(q(a)) \subset q(
+  B_r(a)) \subset q(A)$. Thus $q(A)$ is open.
 \end{proof}

@@ -1,34 +1,5 @@
 % TeX_root = ../main.tex
 
-\begin{lemma}
-  Let $H$ be a Hilbert space and $K$ be a nontrivial closed subspace.
-  Let $\eta \in H$. Then $\xi \in K$ satisfy $\|\xi - \eta\| = d(\eta, K)$ iff
-  $\xi - \eta \perp K$.
-\end{lemma}
-\begin{proof}
-  Let $K$ be a closed subspace of $H$ and let $\eta \in H$. Let $\xi
-  \in K$ such that $\|\eta - \xi\|= d(\eta, K)$. Then for all $\rho
-  \in K$ and $t > 0$, we have
-  \begin{align*}
-    \|\eta - \xi\|^2 &\le \|\eta - (\xi + t\rho)\|^2  \\
-    & = \| \eta - \xi -  t\rho\|^2 \\
-    & = \|\eta - \xi\|^2 + t^2\|\rho\|^2 - 2t\Re \langle \eta - \xi ,
-    \rho \rangle
-  \end{align*}
-  Hence we see that $|2\Re \langle \eta - \xi , \rho \rangle| \le t\|\rho\|^2$
-  Since $t>0$ was arbitrary, limiting it to zero, we get $\Re \langle
-  \eta - \xi ,  \rho \rangle = 0$. Replacing $\rho$ with $-i \rho$
-  will give the imaginary part is also zero.
-
-  Conversely, assume that $(\eta - \xi) \perp K$. Then  for all $\rho
-  \in K$, we have
-  \begin{align*}
-    \|\eta - \rho\|^2 &= \|(\eta - \xi) + (\xi - \rho)\|^2 \\
-    & = \|\eta - \xi\|^2 + \|\xi - \rho\|^2 \\
-    & \ge \|\eta  - \xi\|^2
-  \end{align*}
-\end{proof}
-
 \begin{proposition}
   $I-P_K = P_{K^\perp}$
 \end{proposition}
@@ -45,8 +16,8 @@
 \end{proof}
 
 \begin{proposition}
-  Let $K$ be a closed subspace of $H$. Let $E \subset K$ be an o.n.b
-  for $K$. Extend $E$ to an o.n.b $\tilde{E}$ for $H$. Then \[
+  Let $K$ be a closed subspace of $H$. Let $E \subset K$ be an orthonormal basis
+  for $K$. Extend $E$ to an orthonormal basis $\tilde{E}$ for $H$. Then \[
     P_K|_E = I_K, \quad P_K|_{\tilde{E} \setminus E} = 0
   \]
 \end{proposition}
@@ -60,20 +31,32 @@
 
 \begin{lemma}
   Let $S$ be a nonempty subset of $H$. Then \[
-    (S^\perp)^\perp  = \overline{\textrm{Span}(S)}
+    (S^\perp)^\perp  = \overline{\textrm{span}(S)}
   \]
 \end{lemma}
+\begin{proof}
+  Notice from the above proposition that $\textrm{Ker}(P_K) =
+  K^\perp$. Thus $(S^\perp)^\perp = \textrm{Ker}(P_{S^\perp})$. Since
+  $P_{S^\perp}(s) = 0$ for all $s \in S$, we see that $S \subset
+  \textrm{Ker}(P_{S^\perp})$. Moreover, since
+  $\textrm{Ker}(P_{S^\perp})$ is a closed subspace, we see that
+  $\overline{ \textrm{\textrm{span}}}(S) \subset
+  \textrm{Ker}(P_{S^\perp}) = ( S^\perp)^\perp$.
+\end{proof}
 
 \begin{corollary}
   Let $E$ be an orthonormal subset of $H$. Then the following are equivalent.
   \begin{enumerate}[label=(\arabic*)]
-    \item $E$ is an o.n.b
+    \item $E$ is an orthonormal basis
     \item $(E^\perp)^\perp = H$
     \item $\overline{\textrm{Span}(S)} = H$
     \item $\|\eta\|^2 = \sum_{e \in E} |\langle \eta ,  e \rangle
       |^2, \ \forall \eta \in H$
   \end{enumerate}
 \end{corollary}
+\begin{proof}
+  \textcolor{red}{verify}
+\end{proof}
 
 \begin{proposition}
   Let $K$ be a closed subspace of a Hilbert space $H$. Then $P_K = P_K^*$

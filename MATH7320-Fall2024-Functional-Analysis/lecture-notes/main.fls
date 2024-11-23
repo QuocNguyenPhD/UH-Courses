@@ -386,11 +386,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/yhmath/yrcmex10.tfm
 INPUT ./lectures/2.tex
 INPUT ./lectures/2.tex
 INPUT lectures/2.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./lectures/3.tex
 INPUT ./lectures/3.tex
 INPUT lectures/3.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./lectures/4.tex
 INPUT ./lectures/4.tex
 INPUT lectures/4.tex
@@ -481,6 +481,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb

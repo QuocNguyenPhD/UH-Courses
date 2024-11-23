@@ -1,7 +1,5 @@
 % TeX_root = ../main.tex
 
-\chapter{}
-
 \begin{definition}
   Let $X$ and $Y$ be normed spaces and $T \in B(X, Y)$. The adjoint
   of $T$, denoted by $T^{*} \in B(Y^{*}, X^{*})$, is the map $T^{*}:
@@ -46,6 +44,8 @@
   Is $i_{X^*}$ weak * - weak * continuous.
 \end{example}
 
+\section{Locally Convex Topological Vector Spaces}
+
 \begin{lemma}
   Let $X$ be a normed space and $x_1 , x_2 , \ldots , x_n \in X$ and
   $\epsilon_1 , \epsilon_2 , \ldots , \epsilon_n \ge 0$. Then the set \[
@@ -53,8 +53,10 @@
     \ldots , \epsilon_n}(\phi)
   \]
   is convex.
+  \marginnote{ \scriptsize Review convexity arguments in Arveson's
+  `Subalgebras of C* Algebras'}
   Moreover any topological vector spaces with the topology induced by
-  a family of seminorms is locally convex. Refer back to the proofs of Arveson.
+  a family of seminorms is locally convex.
 \end{lemma}
 \begin{proof}
   \textcolor{red}{verify}
@@ -83,5 +85,4 @@
     t \le 1, \sum t_i = 1, x_i \in S \Big\}
   \]
 \end{definition}
-
 
