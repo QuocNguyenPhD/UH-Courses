@@ -44,33 +44,46 @@
   $\overline{\mathcal{F}(\mathcal{H})}\subset \mathcal{K}(\mathcal{H}) $
   Let $T_n$ be a sequence in $\mathcal{F}(\mathcal{H})$ and $T_n \to
   T \in B(\mathcal{H})$ (in
-  norm). We'll show that the image of $T(B_1^\mathcal{H})$ is closed and
-  totally bounded. Then since the space is complete, this would give
-  a convergent subsequence and hence would be complete.
+  norm). We'll show that $\overline{T(B_1^\mathcal{H})}$ is closed and
+  totally bounded, which is equivalent to compactness in metric
+  spaces.
 
   Let $\epsilon > 0$ be given. Then there exist some $N \in
-  \mathbb{N}$ such that $\|T_n - T\| < \epsilon$. Since $T_N$ is
-  compact, $\exists \eta_1, \eta_2, \ldots \eta_k \in B^\mathcal{H}_1$ \[
+  \mathbb{N}$ such that $\|T_N - T\| < \epsilon$. Moreover \[
     \overline{T_N(B_1^\mathcal{H})} \subset \bigcup_{\eta \in  B_1^\mathcal{H}}
     B_\epsilon(T_N(\eta))
   \]
-  Hence by the compactness of $\overline{T_N(B_1^\mathcal{H})}$ it has a finite
-  open cover. Then \[
+  By the compactness of $\overline{T_N(B_1^\mathcal{H})}$ there exist
+  $\eta_1 , \eta_2 , \ldots , \eta_k \in B_1^\mathcal{H}$ such that  \[
     \overline{T_N(B_1^\mathcal{H})} \subset \bigcup_{i =
-    1}^{n}B_\epsilon(T_N(\eta))
+    1}^{k}B_\epsilon(T_N(\eta_i))
   \]
-  Let $\eta \in B_1^\mathcal{H}$ be arbitrary. Then $\exists i \le j \le k$
+  Thus for an arbitrary $\eta \in B_1^\mathcal{H}$, $\exists i \le  k$
   such that $\|T_N(\eta) - T_N(\eta_i)\| < \epsilon$. Then
   \begin{align*}
     \|T(\eta) - T(\eta_i)\| &\le \|T(\eta) - T_N(\eta)\| + \|T_N(\eta)
     - T_N(\eta_i)\| + \|T_N(\eta_i) - T(\eta_i)\| \\
     & < 3 \epsilon
   \end{align*}
+  Thus we see that
+  \begin{align*}
+    T(B_1^\mathcal{H}) \subset \bigcup_{i = 1}^{k} B_{3\epsilon}(T(\eta_i))
+  \end{align*}
+  and hence
+  \begin{align*}
+    \overline{T(B_1^\mathcal{H})} \subset \bigcup_{i = 1}^{k}
+    \overline{B_{3\epsilon}(T(\eta_i))}
+  \end{align*}
+  which gives total boundedness. Closure of $\overline{
+  T(B_1^\mathcal{H})}$ is obvious. Hence we see that
+  $\overline{T(B_1^\mathcal{H})}$. Thus $T$ is compact and we see
+  $\overline{\mathcal{F}(\mathcal{H})} \subset \mathcal{K}(\mathcal{H})$.
 
   Conversely, let $T \in B(\mathcal{H})$ be compact and $\epsilon>0$ be given.
   So $\exists \eta_1, \eta_2, \ldots , \eta_m \in B_1(\mathcal{H})$ such that
   \begin{align*}
-    T(B_1(\mathcal{H})) &\subset \bigcup_{i = 1}^{n}B_\epsilon(T(\eta_i))
+    \overline{T(B_1^\mathcal{H})} &\subset \bigcup_{i =
+    1}^{n}B_\epsilon(T(\eta_i))
   \end{align*}
   Assume that $\mathcal{H}$ is separable. Let $\{ e_n  \ : \  n \in
   \mathbb{N} \}$ be an orthonormal basis for $\mathcal{H}$ and let $P_n =
@@ -93,7 +106,7 @@
   for the pre-image of $T(\mathcal{H})$, which will again be separable.
 \end{proof}
 
-\begin{remark}
+\begin{proposition}
   Let $\mathcal{K}$ be a separable Hilbert space. Let $\{ e_n \ : \ n \in
   \mathbb{N} \}$ be an orthonormal basis for $\mathcal{K}$.
   For each $n \in
@@ -102,5 +115,8 @@
     P_n(x) \to x
   \]
   pointwise
-\end{remark}
+\end{proposition}
+\begin{proof}
+  Direct application of \autoref{OrthonormalBaisEquiv}(iv)
+\end{proof}
 

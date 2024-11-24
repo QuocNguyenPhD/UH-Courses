@@ -3,10 +3,19 @@
 \marginnote{ \scriptsize 12/11/2024}
 
 \begin{lemma}
-  If $T \in B(H)$ is self adjoint. Then every eigenvalue of $T$ is real.
+  If $T \in B(\mathcal{H})$ is self adjoint. Then every eigenvalue of
+  $T$ is real.
 \end{lemma}
 \begin{proof}
-  \textcolor{red}{verify}
+  Let $\lambda \in \mathbb{C}$ be an eigenvalue of $T$ with
+  eigenvector $v_\lambda$. Then
+  \begin{align*}
+    \lambda \|v\|^2 = \langle \lambda v_\lambda ,  v_\lambda \rangle
+    = \langle T(v_\lambda) ,   v_\lambda \rangle  = \langle v_\lambda
+    ,  T(v_\lambda) \rangle  = \langle  v_\lambda ,  \lambda
+    v_\lambda \rangle = \overline{\lambda}\|v_\lambda\|^2
+  \end{align*}
+  forces $\lambda =  \overline{\lambda}$.
 \end{proof}
 
 \begin{example}
@@ -57,6 +66,7 @@
 \end{proof}
 
 \begin{theorem}[Spectral theorem for compact self-adjoint operators]
+  \label{SpectralTheoremforCompactSAOperators}
   Let $\mathcal{H}$ be a separable Hilbert space and $T \in K(\mathcal{H})$ be
   self-adjoint. Then there is an orthonormal basis $ \{ e_n \}_{n \in
   \mathbb{N}}$ and a sequence $\{\alpha_n\} \in c_{\textbf{0}}$ such that
@@ -123,8 +133,8 @@
   in this case. This happens only when $T$ is finite rank.
 
   Otherwise, $T$ has infinitely man eigenvalues and therefore $E$ is
-  an infinite set, hence by a homework problem, the sequence
-  $\lambda_n \to 0$. \textcolor{red}{verify}.
+  an infinite set, hence by \autoref{CompactiffEigvalsconverge0},  the sequence
+  $\lambda_n \to 0$.
 
   It remains to show that $E$ is an orthonormal basis for
   $\mathcal{H}$. Let $F$ be the collection of all eigenvectors of $T$
@@ -134,5 +144,4 @@
   $T|_{\mathcal{ M}^\perp}$ has no non-zero eigenvectors. Thus from
   what we have proved in the first part $\mathcal{M}^\perp$ must be $\{ 0 \}$.
 \end{proof}
-
 
