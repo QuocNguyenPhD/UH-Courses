@@ -9,4 +9,4 @@
 \contentsline {section}{\numberline {2.2}Locally Convex Topological Vector Spaces}{19}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Hilbert Spaces}{27}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Orthogonal Projections}{30}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Compact Operators}{32}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Compact Operators}{33}{section.3.2}%

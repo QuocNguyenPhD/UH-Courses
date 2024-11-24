@@ -1,21 +1,29 @@
 % TeX_root = ../main.tex
 \section{Compact Operators}
 \begin{definition}
-  let $X, Y$ be Banach Spaces. A linear map $T : X \to Y$ is called a
-  compact operator if $\overline{T(B_1^X)}$ is compact. We denote by
-  $K(X, Y)$, the set of all compact operators.
+  let $\mathcal{X}, \mathcal{Y}$ be Banach Spaces. A linear map $T : \mathcal{
+  X} \to \mathcal{Y}$ is called a
+  compact operator if $\overline{T(B_1^\mathcal{X})}$ is compact,
+  where $B_1^\mathcal{X}$
+  is the unit ball of $\mathcal{X}$. We denote by
+  $\mathcal{K}(\mathcal{X}, \mathcal{Y})$, the set of all
+  compact operators.
 \end{definition}
 
 \begin{example}
-  If either $X$ or $Y$ is finite, then every linear map $T: X \to Y$
-  is compact. If $X$ be any infinite dimensional Banach space. Then
-  $T = \textrm{Id} : X \to X$ is not compact.
+  If either $\mathcal{X}$ or $\mathcal{Y}$ is finite, then every linear map $T:
+  \mathcal{X} \to \mathcal{Y}$
+  is compact. If $\mathcal{X}$ be any infinite dimensional Banach space. Then
+  $T = \textrm{Id} : \mathcal{X} \to X$ is not compact. This follows from
+  \autoref{ClosedUnitBallisCompactiffFiniteDim}.
 \end{example}
 
 \begin{definition}
-  $T: X \to Y$ is called a finite rank if the dimension of $T$ is
+  $T: \mathcal{X} \to \mathcal{Y}$ is called a finite rank if the
+  dimension of $T$ is
   finite. Then the dimension of the image is called the rank of the
-  operator. Let $F(X, Y)$ denote finite rank operators.
+  operator. Let $\mathcal{F}(\mathcal{X}, \mathcal{Y})$ denote finite
+  rank operators.
 \end{definition}
 
 \begin{lemma}
@@ -26,27 +34,32 @@
 \end{proof}
 
 \begin{theorem}
-  Let $H$ be a Hilbert space. Then $K(H) = \overline{F(H)}^{\|\cdot\|}$
+  Let $\mathcal{H}$ be a Hilbert space. Then $\mathcal{K}(\mathcal{H}) =
+  \overline{\mathcal{F}(\mathcal{H})}^{\|\cdot\|}$
 \end{theorem}
 \begin{proof}
-  It is evident that $K(H) \subset K(H)$. We'll now show that
-  $\overline{F(H)}\subset K(H) $
-  Let $T_n$ be a sequence in $F(H)$ and $T_n \to T \in B(H)$ (in
-  norm). We'll show that the image of $T(B_1(H))$ is closed and
+  It is evident that $\mathcal{F}(\mathcal{H}) \subset
+  \mathcal{K}(\mathcal{H})$. We'll
+  now show that
+  $\overline{\mathcal{F}(\mathcal{H})}\subset \mathcal{K}(\mathcal{H}) $
+  Let $T_n$ be a sequence in $\mathcal{F}(\mathcal{H})$ and $T_n \to
+  T \in B(\mathcal{H})$ (in
+  norm). We'll show that the image of $T(B_1^\mathcal{H})$ is closed and
   totally bounded. Then since the space is complete, this would give
   a convergent subsequence and hence would be complete.
 
   Let $\epsilon > 0$ be given. Then there exist some $N \in
-  \mathbb{H}$ such that $\|T_n - T\| < \epsilon$. Since $T_N$ is
-  compact, $\exists \eta_1, \eta_2, \ldots \eta_k \in B^H_1$ \[
-    \overline{T_N(B_1^H)} \subset \bigcup_{\eta \in  B_1^H}
+  \mathbb{N}$ such that $\|T_n - T\| < \epsilon$. Since $T_N$ is
+  compact, $\exists \eta_1, \eta_2, \ldots \eta_k \in B^\mathcal{H}_1$ \[
+    \overline{T_N(B_1^\mathcal{H})} \subset \bigcup_{\eta \in  B_1^\mathcal{H}}
     B_\epsilon(T_N(\eta))
   \]
-  Hence by the compactness of $\overline{T_N(B_1^H)}$ it has a finite
+  Hence by the compactness of $\overline{T_N(B_1^\mathcal{H})}$ it has a finite
   open cover. Then \[
-    \overline{T_N(B_1^H)} \subset \bigcup_{i = 1}^{n}B_\epsilon(T_N(\eta))
+    \overline{T_N(B_1^\mathcal{H})} \subset \bigcup_{i =
+    1}^{n}B_\epsilon(T_N(\eta))
   \]
-  Let $\eta \in B_1^H$ be arbitrary. Then $\exists i \le j \le k$
+  Let $\eta \in B_1^\mathcal{H}$ be arbitrary. Then $\exists i \le j \le k$
   such that $\|T_N(\eta) - T_N(\eta_i)\| < \epsilon$. Then
   \begin{align*}
     \|T(\eta) - T(\eta_i)\| &\le \|T(\eta) - T_N(\eta)\| + \|T_N(\eta)
@@ -54,18 +67,18 @@
     & < 3 \epsilon
   \end{align*}
 
-  Conversely, let $T \in B(H)$ be compact and $\epsilon>0$ be given.
-  So $\exists \eta_1, \eta_2, \ldots , \eta_m \in B_1(H)$ such that
+  Conversely, let $T \in B(\mathcal{H})$ be compact and $\epsilon>0$ be given.
+  So $\exists \eta_1, \eta_2, \ldots , \eta_m \in B_1(\mathcal{H})$ such that
   \begin{align*}
-    T(B_1(H)) &\subset \bigcup_{i = 1}^{n}B_\epsilon(T(\eta_i))
+    T(B_1(\mathcal{H})) &\subset \bigcup_{i = 1}^{n}B_\epsilon(T(\eta_i))
   \end{align*}
-  Assume that $H$ is separable. Let $\{ e_n  \ : \  n \in
-  \mathbb{N} \}$ be an orthonormal basis for $H$ and let $P_n =
+  Assume that $\mathcal{H}$ is separable. Let $\{ e_n  \ : \  n \in
+  \mathbb{N} \}$ be an orthonormal basis for $\mathcal{H}$ and let $P_n =
   P_{\textrm{Span}\{e_1 , e_2 , \ldots , e_n\}}$. Then choose $ N>0$
   such that for all $n >N$, $\forall i = 1, 2, \ldots m$, \[
     \|(P_nT - T)(\eta_i)\| < \epsilon
   \]
-  Then $\forall \xi \in H$ with $\|\xi\| = 1$. Choose $1 \le j \le
+  Then $\forall \xi \in \mathcal{H}$ with $\|\xi\| = 1$. Choose $1 \le j \le
   m$ such that $\|T(\xi) - T(\eta_j)\| < \epsilon$. Then
   \begin{align*}
     \|P_nT(\xi) - T(\xi)\| & \le \|P_nT(\xi) - P_nT(\eta_j)\| +
@@ -75,16 +88,17 @@
 
   Which gives that $\|P_nT - T\| < 3\epsilon$ for all $n \in \mathbb{N}$.
 
-  The generalization of the case when $H$ is non-separable, will use
-  the fact that $T(H)$ is separable and using an orthonormal basis
-  for the pre-image of $T(H)$, which will again be separable.
+  The generalization of the case when $\mathcal{H}$ is non-separable, will use
+  the fact that $T(\mathcal{H})$ is separable and using an orthonormal basis
+  for the pre-image of $T(\mathcal{H})$, which will again be separable.
 \end{proof}
 
 \begin{remark}
-  Let $K$ be a separable Hilbert space. Let $\{ e_n \ : \ n \in
-  \mathbb{N} \}$ be an orthonormal basis for $K$. For each $n \in
+  Let $\mathcal{K}$ be a separable Hilbert space. Let $\{ e_n \ : \ n \in
+  \mathbb{N} \}$ be an orthonormal basis for $\mathcal{K}$.
+  For each $n \in
   \mathbb{N}$, let $P_n$ be the projection to the $\textrm{Span}\{
-  e_1 , e_2 , \ldots , e_n \}$. Then for all $ x \in K$ \[
+  e_1 , e_2 , \ldots , e_n \}$. Then for all $ x \in \mathcal{K}$ \[
     P_n(x) \to x
   \]
   pointwise
