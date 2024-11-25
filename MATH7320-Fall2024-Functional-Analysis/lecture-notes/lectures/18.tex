@@ -98,3 +98,17 @@ We'll be working to prove the following theorem.
   See homework-5
 \end{proof}
 
+\begin{proposition}
+  \label{InvariantSubspacesofSelfAdjointOperatorsReduce} Let $T \in
+  B(\mathcal{H})$ be self adjoint with $T(\mathcal{M}) \subset
+  \mathcal{M}$, where $\mathcal{M}$ is a closed subspace of
+  $\mathcal{H}$. Then $\mathcal{M}$ reduces $T$.
+\end{proposition}
+\begin{proof}
+  Let $m \in \mathcal{M}$ and $x \in \mathcal{M}^\perp$. Then
+  \begin{align*}
+    \langle T(x) ,  m \rangle = \langle x , T(m) \rangle = 0
+  \end{align*}
+  shows that $T(\mathcal{M}^\perp) \subset \mathcal{M}^\perp$.
+\end{proof}
+

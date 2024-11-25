@@ -9,16 +9,16 @@ $P_\lambda:= P_{\textrm{Ker}(T- \lambda I)}$. Then spectral theorem gives
   T = \sum_{\lambda \in  \sigma(T)}  \lambda P_\lambda
 \end{align*}
 
-\begin{exercise}
-  Show $\sum_{\lambda \in  \Lambda}  f(\lambda) P_\lambda$
-  convergences pointwise and in norm. i.e
-  \begin{align*}
-    \Big( \sum_{i = 1}^{N} f(\lambda_i) P_{\lambda_i}\Big)
-  \end{align*}
-\end{exercise}
-\begin{proof}
-  \textcolor{red}{verify}
-\end{proof}
+% \begin{exercise}
+%   Show $\sum_{\lambda \in  \Lambda}  f(\lambda) P_\lambda$
+%   convergences pointwise and in norm. i.e
+%   \begin{align*}
+%     \Big( \sum_{i = 1}^{N} f(\lambda_i) P_{\lambda_i}\Big)
+%   \end{align*}
+% \end{exercise}
+% \begin{proof}
+%   \textcolor{red}{verify}
+% \end{proof}
 
 \begin{definition}
   Let $\Xi$ be a non-empty subset of $B(\mathcal{H})$. The commutant
@@ -34,11 +34,24 @@ $P_\lambda:= P_{\textrm{Ker}(T- \lambda I)}$. Then spectral theorem gives
   \end{enumerate}
 \end{exercise}
 \begin{proof}
-  \textcolor{red}{verify}
+  \begin{enumerate}[label=(\arabic*)]
+    \item Let $(S_n)$ be a sequence in $\Xi^\prime$ such that $S_n
+      \to S$ in $ B(\mathcal{H})$. Then by the continuity of the map
+      $m_T: B(\mathcal{H}) \to B(\mathcal{H}):= R \to TR$ as $
+      \|m_T(R)\| \le \|T\| \|R\|$, we see that $S_nT \to ST$ and
+      similarly by the continuity of $m^\prime_T: S \to TS$, we see that
+      $TS_n \to TS$. Then by the algebra of limits, for $ T \in \Xi$,
+      we see that
+      \begin{align*}
+        0 = S_nT - TS_n \to ST - TS
+      \end{align*}
+      which forces $S \in \Xi^\prime$.
+    \item
+  \end{enumerate}
 \end{proof}
 
 \begin{theorem}[Functional calculus for compact normal operators]
-  Let $T \in B(H)$ be compact normal with spectral decomposition
+  Let $T \in B(\mathcal{H})$ be compact normal with spectral decomposition
   \begin{align*}
     T = \sum_{\lambda \in  \sigma(T)} \lambda P_\lambda.
   \end{align*}
@@ -62,9 +75,10 @@ $P_\lambda:= P_{\textrm{Ker}(T- \lambda I)}$. Then spectral theorem gives
     \item \textcolor{red}{exercise}
     \item \textcolor{red}{exercise}
     \item Let $f \in \ell^\infty(\mathbb{C})$, and let $S \in
-      \{T\}^\prime$. Since $ ST = TS$, for every $ \lambda \in
-      \sigma(T)$, the eigenspace $\textrm{Ker}(T - \lambda I)$ is
-      invariant under $S$. Hence they are all reducing for $S$. Then
+      \{T\}^\prime$. Since $ ST = TS$, by
+      \autoref{CommutingOperatorsPreserveInvariantSpaces} for every $
+      \lambda \in \sigma(T)$, the eigenspace $\textrm{Ker}(T - \lambda I)$ is
+      invariant under $S$. Hence they are all reducing for $S$. i.e
       $SP_\lambda = P_\lambda S$. Thus,
       \begin{align*}
         Sf(T) &= S \sum_{\lambda \in  \sigma(T)}  f(\lambda)   P_\lambda \\
@@ -74,11 +88,12 @@ $P_\lambda:= P_{\textrm{Ker}(T- \lambda I)}$. Then spectral theorem gives
       \end{align*}
       So we get $f(T) \in \{ T \}^{\prime \prime}$
 
-      Note that $\forall \lambda \neq \lambda^\prime \in \sigma(T)$,
-      $ P_\lambda P_{\lambda^\prime} = 0$. Then for all $\gamma \in
-      \sigma(T)$, we get $P_\gamma T = P_\gamma \sum_{\lambda \in
-      \sigma(T)}  \lambda P_\lambda  = \gamma P_\gamma$. So $
-      P_\gamma \in \{ T \}^\prime$. Thus $RP_\gamma = P_\gamma R$ for
+      Let $ R \in \{ T \}^{\prime\prime}$. Note that $\forall \lambda \neq
+      \lambda^\prime \in \sigma(T)$, $P_\lambda P_{\lambda^\prime} = 0$ by
+      \autoref{DistinctEigenvectorsAreOrthogonal}. Then for all $\gamma \in
+      \sigma(T)$, we get $$P_\gamma T = P_\gamma \sum_{\lambda \in
+      \sigma(T)}  \lambda P_\lambda  = \gamma P_\gamma$$
+      So $P_\gamma \in \{ T \}^\prime$. Thus $RP_\gamma = P_\gamma R$ for
       all $ \gamma \in \sigma(T)$.
 
       Fix $\gamma \in \sigma(T)$. Given $A \in
@@ -109,5 +124,4 @@ $P_\lambda:= P_{\textrm{Ker}(T- \lambda I)}$. Then spectral theorem gives
     \mathbb{C}  \ : \   T - \lambda I \textrm{ is not invertible} \}$
   \end{definition}
 \end{proof}
-
 

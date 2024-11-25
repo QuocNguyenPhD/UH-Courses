@@ -10,6 +10,7 @@
   \begin{align*}
     T = \frac{T+T^*}{2} + i \frac{(T-T^*)}{2i}
   \end{align*}
+  Verify that $\frac{T+T^*}{2}$ and $\frac{T-T^*}{2i}$ are self adjoint.
 \end{proof}
 
 \begin{lemma}
@@ -18,7 +19,8 @@
 \end{lemma}
 \begin{proof}
   \begin{align*}
-    (T \mp T^*)( T \pm T^*) = T^2 \pm T^*T \mp TT^* + T^{*2}
+    (T + T^*)( T - T^*) = T^2 + T^*T - TT^* - T^{*2} \\
+    (T - T^*)( T + T^*) = T^2 - T^*T + TT^* - T^{*2}
   \end{align*}
 \end{proof}
 
@@ -27,28 +29,45 @@
   where $T_{1}, T_{2} \in S(\mathcal{H})$ and $T_{1}T_{2} = T_{2}T_1$
 \end{lemma}
 \begin{proof}
-  \textcolor{red}{Use above lemma}
+  Directly apply above lemma
 \end{proof}
 
 \begin{lemma}
+  \label{CommutingOperatorsPreserveInvariantSpaces}
   Let $T \in B(\mathcal{H}), \lambda \in \mathbb{C}$ be an eigenvalue
   of $T$, and let $ S \in B(\mathcal{H})$ with $ST = TS$. Then $
   \textrm{Ker}(T - \lambda I)$ is invariant under $S$
 \end{lemma}
 \begin{proof}
-  \textcolor{red}{verify}
+  Let $M = \textrm{Ker}(T - \lambda I)$ and $ m \in M$. Then
+  \begin{align*}
+    (T - \lambda I)(S(m)) &= TS(m) - \lambda S(m) \\
+    &= ST(m) - \lambda S(m)\\
+    & = S(\lambda m) - \lambda S(m)\\
+    &= \lambda S(m) - \lambda S(m) = 0
+  \end{align*}
 \end{proof}
 
 \begin{lemma}
+  \label{DistinctEigenvectorsAreOrthogonal}
   Let $T \in B(\mathcal{H})$, be self-adjoint. Let $\lambda_1 \neq
   \lambda_2 \in \sigma(T)$ and $\xi_1, \xi_2 \in \mathcal{H}$ their
   corresponding eigenvectors, then $ \langle \xi_1 , \xi_2 \rangle = 0$
 \end{lemma}
+\begin{proof}
+  \begin{align*}
+    0 = \langle T \xi_1 , \xi_2 \rangle - \langle \xi_1 , T\xi_2
+    \rangle = \lambda_1 \langle  \xi_1 , \xi_2 \rangle - \lambda_2
+    \langle \xi_1 , \xi_2 \rangle = (\lambda_1 - \lambda_2) \langle
+    \xi_1 , \xi_2 \rangle
+  \end{align*}
+\end{proof}
 
 \begin{theorem}[Spectral theorem for compact normal operators]
-  Let $\mathcal{H}$ be a separable Hilbert space and $T \in K(\mathcal{H})$ be
-  normal. Then there is an orthonormal basis $ \{ e_n \}_{n \in
-  \mathbb{N}}$ and a sequence $\{\alpha_n\} \in c_{\textbf{0}}$ such that
+  Let $\mathcal{H}$ be a separable Hilbert space and $T \in
+  \mathcal{K}(\mathcal{H})$ normal. Then there is an orthonormal
+  basis $ \{ e_n \}_{n \in \mathbb{N}}$ and a sequence $(\alpha_n)
+  \in \textbf{c}_{0}$ such that
   \begin{align*}
     T e_n = \alpha_n e_n
   \end{align*}
@@ -66,14 +85,18 @@
   where each $\textrm{Ker}(S_{1} - \lambda I)$ is finite dimensional.
 
   Since $S_2$ commutes with $S_{1}$, $ \textrm{Ker}(S_{1} - \lambda
-  I)$ is invariant under $S_2$ and $S_2|_{\textrm{Ker}(S_{1} -
-  \lambda I)}$ is self-adjoint and compact. Thus, by the first part
+  I)$ is invariant under $S_2$ by
+  \autoref{CommutingOperatorsPreserveInvariantSpaces}, and
+  $S_2|_{\textrm{Ker}(S_{1} -
+  \lambda I)}$ is self-adjoint by
+  \autoref{InvariantSubspacesofSelfAdjointOperatorsReduce} and
+  compact. Thus, by the first part
   of the proof, for each $\lambda \in \sigma(S_1)$, we can choose and
   orthonormal basis $E_\lambda$ for $\textrm{Ker}(S_1 - \lambda I )$
   consisting of eigenvectors of $S_2$.
 
   Observe that if $\xi \in \mathcal{H}$ is such that $S_{1} \xi
-  =\lambda \xi$ and $S_2 \xi = \beta \xi$, then $S_2 \xi = \beta \xi$. Then
+  =\lambda \xi$ and $S_2 \xi = \beta \xi$, then
   \begin{align*}
     T \xi = (\lambda + i \beta) \xi
   \end{align*}
@@ -91,7 +114,9 @@
   \end{align*}
 \end{lemma}
 \begin{proof}
-  One part is easy
+  If $f \in \textrm{span}\{ f_1 , f_2 , \ldots , f_n \}$ and if $x
+  \in \textrm{Ker}(f_i)$ for each $1 \le i \le n$, then clearly $f(x) = 0$.
+  Conversely \textcolor{red}{verify}.
 \end{proof}
 
 \begin{lemma}
@@ -99,5 +124,4 @@
     (X, \textrm{weak})^* = X^*
   \end{align*}
 \end{lemma}
-
 
