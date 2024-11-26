@@ -28,17 +28,17 @@
   by $\Lambda$ is a function $f:\Lambda \to S$. We denote the net by
   $(x_\lambda)_{\lambda \in \Lambda}$.
 
+  \marginnote{ \scriptsize See how nets become the topological
+    equivalent of sequences in metric spaces. Find what
+    property of the metric space makes it enough to be indexed by a
+  countable totally ordered set for openness.}
+
   In addition if $S$ is a topological space, we say a net
   $(x_\lambda)_{\lambda \in \Lambda}$ converges to a point $x \in S$
   if  for all open set $U$ in $S$ with $x \in U$, there exists an
   $\lambda_0 \in \Lambda$ such that for all $\lambda \ge \lambda_0$
   we have $x_\lambda \in U$.
 \end{definition}
-
-\marginnote{ \scriptsize See how nets become the topological
-  equivalent of sequences in metric spaces. Find what
-  property of the metric space makes it enough to be indexed by a
-countable totally ordered set for openness.}
 
 \begin{remark}
   By definition, a basis of open neighborhoods of a point $x_0 \in X$
@@ -49,8 +49,8 @@ countable totally ordered set for openness.}
   \]
 
   So the basis in a weak topology is \[
-    \bigcup_{f_1 , f_2 , \ldots , f_n \in X^{*} \ \epsilon_1 ,
-    \epsilon_2 , \ldots , \epsilon_n > 0}(x_0) = \{  z \in Z \Big|
+    \bigcup_{\substack{f_1 , f_2 , \ldots , f_n \in X^{*} \\ \epsilon_1 ,
+    \epsilon_2 , \ldots , \epsilon_n > 0}}(x_0) = \{  z \in Z \Big|
     |f_k(z- x_0)|< \epsilon_k, \textrm{ for all } k = 1, 2, \ldots n \}
   \]
 \end{remark}

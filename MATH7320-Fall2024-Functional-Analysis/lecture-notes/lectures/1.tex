@@ -55,6 +55,7 @@ Hence every normed space is a topological vector space.
 \end{example}
 
 \begin{proposition}
+  \label{EquivalentDefnsofContinuity}
   Let $X, Y$ be normed space, and let $T: X \to Y$ be linear. Then
   the following are equivalent.
   \begin{itemize}
@@ -164,12 +165,9 @@ Hence every normed space is a topological vector space.
   Therefore the identity map $I: (X, \|\cdot\|_\infty) \to (X,
   \|\cdot\|)$ is continuous. Since the set $ K = \{ x \in X \ :
   \ \|x\|_\infty \le 1 \}$ is compact,  K is also compact in $(X,
-  \|\cdot\|)$ and the restriction $\textrm{Id}|_K$ is also a
-  homeomorphism. \textcolor{red}{verify}
-  In particular, the set $\{ x \in X  \ : \  \|x\|_\infty < 1 \}$ is
-  an open neighborhood of $0 \in (X, \|\cdot\|)$
-  By the Heine-Borel theorem, the unit ball $B = \{ x \in X  \ : \
-  \|x\|_2 \le 1 \}$ is compact. Hence $B$ is compact in $(X,
-  \|\cdot\|)$. \textcolor{red}{verify the last line}.
+  \|\cdot\|)$. Moreover if $V \subset K$ is closed
+  in $\|\cdot\|_\infty$, then $V$ will also be closed
+  in $ \|\cdot\|$ being compact. Hence $I|_K$ will be an open map.
+  Now its an easy application of \autoref{EquivalentDefnsofContinuity}.
 \end{proof}
 

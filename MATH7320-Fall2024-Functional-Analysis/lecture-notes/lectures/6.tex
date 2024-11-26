@@ -70,7 +70,8 @@
   bounded linear map. Then $T^{-1}: Y \to X$ is bounded.
 \end{corollary}
 \begin{proof}
-  \textcolor{red}{verify}
+  By open mapping theorem, $T$ is a bi-continuous map. Now use
+  \autoref{EquivalentDefnsofContinuity}
 \end{proof}
 
 \begin{theorem}[Closed Graph Theorem]
@@ -81,14 +82,16 @@
 \end{theorem}
 \begin{proof}
   Define the norm $\|(x, y)\| = \|x\|_X + \|y\|_Y$ on $X \times Y$.
-  Then $ X \times Y $ with this norm is a Banach space. \textcolor{red}{verify}.
+  Notice that $(x_n, y_n) \to (x, y)$ if and only if $x_n \to x$, and
+  $y_n \to y$. Hence $(X \times Y, \|\cdot\|)$ is a Banach space.
 
   Assume $T$ is continuous. Then if $(x_n, T(x_n))$ is Cauchy in
   $g(T)$ then $x_n$ and $T(x_n)$ must be cauchy in $X$ and $Y$
   respectively. By the completeness of the spaces $X$ and $Y$, we get
   $x_n \to x \in X$ and $T( x_n) \to y \in Y$. Moreover by continuity
-  of $T$, we get $T(x_n) \to x$. Since the Banach space is Hausdorff,
-  we get $y = x$ and that $(x, T(x)) \in g(T)$ making it closed.
+  of $T$, we get $T(x_n) \to T(x)$. Since the Banach space is Hausdorff,
+  we get $y = x$ and that $(x_n, T(x_n)) \to (x, T(x)) \in g(T)$
+  making it closed.
 
   Conversely,  define $S: X \to g(T)$ as $S(x) = (x, T(x))$. $S$ is
   linear and bijective. Assume $ g(T)$ is closed, hence a Banach space.

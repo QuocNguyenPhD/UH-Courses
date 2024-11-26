@@ -45,24 +45,25 @@
 
 \begin{theorem}
   Let $X$ be a normed space. Then $E$ is weak * metrizable iff $X$ is separable.
+  \marginnote{ \scriptsize \it \textcolor{red}{complete this proof}}
 \end{theorem}
 \begin{proof}
   Assume $X$ is separable. Let $\{ x_n  \ : \  n \in \mathbb{N} \}$
   be a dense subset of $X$. For every $f, g \in E$, define $d(f, g)
-  := \sum_{n \in \mathbb{N}}  \frac{1}{2^n}|f( \frac{x_n}{\|x_n\|} -
-    g( \frac{x_n}{\|x_n\|} )|$. Check that $d$ is a metric.
+  := \sum_{n \in \mathbb{N}}  \frac{1}{2^n}|f( \frac{x_n}{\|x_n\|}) -
+  g( \frac{x_n}{\|x_n\|} )|$. Check that $d$ is a metric.
 
-    Now asssume $f_i \to f$ weakly in $E$. Then $f_i(x_n) \to f(x_n)$
-    for all $n \in \mathbb{N}$ and $d(f_i, f) \to 0$ (\textcolor{red}{verify}).
+  Now asssume $f_i \to f$ weakly in $E$. Then $f_i(x_n) \to f(x_n)$
+  for all $n \in \mathbb{N}$ and $d(f_i, f) \to 0$ (\textcolor{red}{verify}).
 
-    % Conversely if $d(f_i, f) \to 0$ then $f_i(x_n) \to f(x_n)$ for
-    % all $n \in \mathbb{N}$.
-    Assume $E$ is metrizable. Then $\exists \{ U_n \ : \ n \in
-    \mathbb{N} \}$ of weak * open neighborhoods of $0$ such that
-    $\cap_{n = 1}^{\infty}U_n = \{ 0 \}$. So, for each $ n \in
-    \mathbb{N}$, there exists a finite set $ A_n \in X$ and $\epsilon
-    > 0$ such that the (subbasis sets) $\{ f \in E \ : \ |f|\le
-      \epsilon \forall x \in A_n  \subset U_n$. Now let $A = \cup_{n
-      = 1}^{\infty}A_n$. Let $\phi \in E$ such that $\phi(x) = 0$ for
-      all $x \in A$.
-    \end{proof}
+  % Conversely if $d(f_i, f) \to 0$ then $f_i(x_n) \to f(x_n)$ for
+  % all $n \in \mathbb{N}$.
+  Assume $E$ is metrizable. Then $\exists \{ U_n \ : \ n \in
+  \mathbb{N} \}$ of weak * open neighborhoods of $0$ such that
+  $\cap_{n = 1}^{\infty}U_n = \{ 0 \}$. So, for each $ n \in
+  \mathbb{N}$, there exists a finite set $ A_n \in X$ and $\epsilon
+  > 0$ such that the (subbasis sets) $\{ f \in E \ : \ |f|\le
+    \epsilon \forall x \in A_n  \subset U_n$. Now let $A = \cup_{n
+    = 1}^{\infty}A_n$. Let $\phi \in E$ such that $\phi(x) = 0$ for
+    all $x \in A$.
+  \end{proof}

@@ -39,13 +39,15 @@
 \begin{lemma}
   The canocial map, $q: X \to \frac{X}{Y}$ is a continuous open
   map. A subset $E \subset X/Y$ is open iff $ q^{-1}(E) \subset X$ is open.
+  \marginnote{ \scriptsize \it This is also a direct
+  consequence of open mapping theorem}
 \end{lemma}
 \begin{proof}
   Since $\|x + Y\| \le \|x\|$,  for all $x \in X$, we see that the
   map $q$ is a contraction. Thus  for all open $E \subset X/Y$, we
   get $ q^{-1}(E)$ is open.
 
-  Conersely, assume that $  A \subset X$ is open. Let $ x \in A$
+  Conversely, assume that $  A \subset X$ is open. Let $ x \in A$
   and $ r > 0$ such that $B_r(a) \subset A$. Let $  z \in X$ such
   that $\|q(a) - q(z)\| < r$. So, $\|(a-z) + Y\| < r$. Then
   $\exists y \in Y$ such that $ \|a-z-y\| < r$. So $z+y \in B_r(a),
